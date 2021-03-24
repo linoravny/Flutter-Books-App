@@ -8,6 +8,7 @@ class BookCategories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: GridView.builder(
+        padding: const EdgeInsets.all(20),
         controller: new ScrollController(keepScrollOffset: false),
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
@@ -18,13 +19,6 @@ class BookCategories extends StatelessWidget {
             DUMMY_CATEGORIES[index].color,
           );
         },
-        padding: const EdgeInsets.all(20),
-        // children: DUMMY_CATEGORIES
-        //     .map((category) => CategoryItem(
-        //           category.title,
-        //           category.color,
-        //         ))
-        //     .toList(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 20,

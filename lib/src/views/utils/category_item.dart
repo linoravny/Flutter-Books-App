@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../views/pages/books_list.dart';
 
 class CategoryItem extends StatelessWidget {
   final String title;
@@ -6,18 +7,33 @@ class CategoryItem extends StatelessWidget {
 
   CategoryItem(this.title, this.color);
 
+  void selectCategories(BuildContext ctx) {
+    Navigator.of(ctx).push(
+      MaterialPageRoute(
+        builder: (_) {
+          return BookList();
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(15), //const - not render each time
-      child: Text(title),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [color.withOpacity(0.8), color],
-          begin: Alignment.topLeft,
-          end: Alignment.topRight,
+    return InkWell(
+      onTap: () => selectCategories(context),
+      splashColor: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(15),
+      child: Container(
+        padding: const EdgeInsets.all(15), //const - not render each time
+        child: Text(title, style: Theme.of(context).textTheme.headline6),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [color.withOpacity(0.8), color],
+            begin: Alignment.topLeft,
+            end: Alignment.topRight,
+          ),
+          borderRadius: BorderRadius.circular(15),
         ),
-        borderRadius: BorderRadius.circular(15),
       ),
     );
   }

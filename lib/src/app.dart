@@ -18,27 +18,29 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    return Platform.isIOS
-        ? CupertinoPageScaffold(
-            navigationBar: CupertinoNavigationBar(
-              backgroundColor: CupertinoColors.systemGrey.withOpacity(0.8),
-              middle: const Text('Books App'),
-            ),
-            child: Column(
-              children: <Widget>[pageBody],
-            ),
+    return
+        // Platform.isIOS
+        //   ? CupertinoPageScaffold(
+        //       navigationBar: CupertinoNavigationBar(
+        //         backgroundColor: CupertinoColors.systemGrey.withOpacity(0.8),
+        //         middle: const Text('Books App'),
+        //       ),
+        //       child: Column(
+        //         children: <Widget>[pageBody],
+        //       ),
+        //     )
+        //   :
+        Scaffold(
+      appBar: AppBar(
+        title: const Text('Books App'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: null,
           )
-        : Scaffold(
-            appBar: AppBar(
-              title: Text('Books App'),
-              actions: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.add),
-                  onPressed: null,
-                )
-              ],
-            ),
-            body: pageBody,
-          );
+        ],
+      ),
+      body: pageBody,
+    );
   }
 }
