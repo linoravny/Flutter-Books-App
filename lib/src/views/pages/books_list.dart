@@ -8,6 +8,13 @@ class BookList extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('books List'),
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.search),
+              tooltip: 'search by title',
+              onPressed: () {},
+            ),
+          ],
         ),
         body: Container(
           child: Center(
