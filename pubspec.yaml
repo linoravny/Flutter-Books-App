@@ -26,6 +26,7 @@ dependencies:
   intl: ^0.17.0
   flutter_platform_widgets: ^0.50.0
   image_picker: ^0.6.6+5
+  url_launcher: ^5.4.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -61,16 +62,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  assets:
+    - assets/images/
   fonts:
     - family: OpenSans
       fonts:
-        - asset: lib/src/assets/fonts/OpenSans-Regular.ttf
-        - asset: lib/src/assets/fonts/OpenSans-Bold.ttf
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
           weight: 700
     - family: QuickSand
       fonts:
-        - asset: lib/src/assets/fonts/QuickSand-Regular.ttf
-        - asset: lib/src/assets/fonts/QuickSand-Bold.ttf
+        - asset: assets/fonts/QuickSand-Regular.ttf
+        - asset: assets/fonts/QuickSand-Bold.ttf
           weight: 700
     # - family: Trajan Pro
     #   fonts:

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../damy_data/books_data.dart';
+import './book_item.dart';
 
 class BookList extends StatelessWidget {
   @override
@@ -41,7 +42,21 @@ class BookList extends StatelessWidget {
                           children: <Widget>[
                             TextButton(
                               child: const Text('Book Details'),
-                              onPressed: () {/* ... */},
+                              onPressed: () {
+                                showDialog<void>(
+                                  context: context,
+                                  barrierDismissible: false,
+                                  builder: (_) => BookItem(
+                                      itemDataObject: DUMMY_BOOKS[index]),
+                                );
+                                // Navigator.of(context).push(
+                                //   new MaterialPageRoute<Null>(
+                                //       builder: (BuildContext context) {
+                                //         return new BookItem();
+                                //       },
+                                //       fullscreenDialog: true),
+                                // );
+                              },
                             ),
                             const SizedBox(width: 8),
                           ],

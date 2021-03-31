@@ -50,5 +50,12 @@
 
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow access to microphone</string>
+
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+	<string>https</string>
+	<string>http</string>
+	</array>
+	
 </dict>
 </plist>
