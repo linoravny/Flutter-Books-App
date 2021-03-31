@@ -9,5 +9,5 @@ Books App Flutter project.
 
 ## Getting Started
 
-open simulator: $ open -a Simulator
-run app - $ flutter run.
+- open simulator: $ open -a Simulator
+- run app - $ flutter run.
