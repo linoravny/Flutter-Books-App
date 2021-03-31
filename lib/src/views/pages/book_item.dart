@@ -8,38 +8,54 @@ class BookItem extends StatelessWidget {
   BookItem({this.itemDataObject});
 
   _launchURL(String url) async {
-    String def_url = 'https://flutter.io';
+    String defUrl = 'https://flutter.io';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      await launch(def_url);
+      await launch(
+        defUrl,
+        forceWebView: true,
+      );
       //throw 'Could not launch $url';
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      actions: [
-        IconButton(
-          onPressed: () => Navigator.pop(context, true),
-          icon: Icon(Icons.close),
-          tooltip: 'close book item popup',
-        ),
-      ],
-      title: Column(
-        children: [
+    return Container(
+      // actions: [
+      //   IconButton(
+      //     onPressed: () => Navigator.pop(context, true),
+      //     icon: Icon(Icons.close),
+      //     tooltip: 'close book item popup',
+      //   ),
+      // ],
+      // title:
+      color: Colors.deepOrange[50],
+      padding: EdgeInsets.all(25),
+      //alignment: Alignment(0, 0),
+      height: 200,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
           Text(itemDataObject.title),
           Text(itemDataObject.country),
           Text(itemDataObject.language),
           InkWell(
-              child: new Text(itemDataObject.link),
+              child: new Text(
+                itemDataObject.link,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepOrange[300],
+                ),
+              ),
               onTap: () {
                 _launchURL(itemDataObject.link);
               }),
         ],
       ),
-      contentPadding: EdgeInsets.zero,
+      //contentPadding: EdgeInsets.zero,
     );
   }
 }

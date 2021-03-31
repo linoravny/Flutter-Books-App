@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 import '../../damy_data/books_data.dart';
 import './book_item.dart';
@@ -43,12 +44,23 @@ class BookList extends StatelessWidget {
                             TextButton(
                               child: const Text('Book Details'),
                               onPressed: () {
-                                showDialog<void>(
+                                showMaterialModalBottomSheet(
                                   context: context,
-                                  barrierDismissible: false,
-                                  builder: (_) => BookItem(
-                                      itemDataObject: DUMMY_BOOKS[index]),
+                                  builder: (context) => SingleChildScrollView(
+                                    controller:
+                                        ModalScrollController.of(context),
+                                    child: BookItem(
+                                      itemDataObject: DUMMY_BOOKS[index],
+                                    ),
+                                  ),
                                 );
+                                // showDialog<void>(
+                                //   context: context,
+                                //   barrierDismissible: false,
+                                //   builder: (_) => BookItem(
+                                //       itemDataObject: DUMMY_BOOKS[index]),
+                                // );
+
                                 // Navigator.of(context).push(
                                 //   new MaterialPageRoute<Null>(
                                 //       builder: (BuildContext context) {

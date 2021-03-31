@@ -18,22 +18,12 @@ class _AppState extends State<App> {
   );
 
   PickedFile imageFile;
-  Future _getImage(int type) async {
+  Future<PickedFile> _getImage(int type) async {
     PickedFile pickedImage = await ImagePicker().getImage(
         source: type == 1 ? ImageSource.camera : ImageSource.gallery,
         imageQuality: 50);
     return pickedImage;
   }
-
-  // File _image;
-  // _imgFromCamera() async {
-  //   File image = await ImagePicker().pickImage(
-  //       source: ImageSource.camera, imageQuality: 50);
-
-  //   setState(() {
-  //     _image = image;
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {
