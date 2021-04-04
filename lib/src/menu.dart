@@ -21,7 +21,7 @@ class Menu extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.book),
-            title: Text('Books Categories'),
+            title: Text('Books'),
             onTap: () => {Navigator.of(context).pop()},
           ),
         ],

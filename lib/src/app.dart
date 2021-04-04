@@ -72,29 +72,6 @@ class _AppState extends State<App> {
         ),
 
         // actions: <Widget>[
-        //   IconButton(
-        //       icon: Icon(Icons.camera_alt_sharp),
-        //       tooltip: 'Open Device Camera',
-        //       onPressed: () async {
-        //         final tmpFile = await _getImage(2);
-
-        //         setState(() {
-        //           imageFile = tmpFile;
-        //         });
-        //       }),
-        //   ClipRRect(
-        //     borderRadius: BorderRadius.circular(9.0),
-        //     child: Container(
-        //       color: Color(0xdb7093),
-        //       padding: EdgeInsets.all(10),
-        //       child: CircleAvatar(
-        //         backgroundColor: Color(0xdb7093),
-        //         backgroundImage: imageFile == null
-        //             ? new AssetImage('assets/images/small-person-icon-24.jpg')
-        //             : FileImage(File(imageFile.path)),
-        //       ),
-        //     ),
-        //   ),
         // ],
       ),
       body: pageBody,
