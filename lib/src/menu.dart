@@ -12,17 +12,32 @@ class Menu extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.login, size: 18),
             title: Text('Login'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.pushNamed(
+                context,
+                '/login',
+              ),
+            },
           ),
           ListTile(
             leading: Icon(Icons.home),
             title: Text('Home'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.pushNamed(
+                context,
+                '/home',
+              ),
+            },
           ),
           ListTile(
             leading: Icon(Icons.book),
             title: Text('Books'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.pushNamed(
+                context,
+                '/book-categories',
+              )
+            },
           ),
         ],
       ),

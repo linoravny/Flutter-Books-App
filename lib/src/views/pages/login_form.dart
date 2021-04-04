@@ -1,4 +1,5 @@
 import 'package:books_app/src/business_logic/models/user.dart';
+import 'package:books_app/src/main-shell.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatefulWidget {
@@ -24,31 +25,34 @@ class _LoginFormState extends State<LoginForm> {
     return null;
   }
 
+  final pageBody = Container(
+    child: Text('Login Form'),
+    // Form(
+    //   key: _formKey,
+    //   child: Column(
+    //     crossAxisAlignment: CrossAxisAlignment.stretch,
+    //     children: [
+    //       TextFormField(
+    //         decoration: InputDecoration(labelText: 'email'),
+    //         keyboardType: TextInputType.emailAddress,
+    //         validator: _validateEmail,
+    //         onSaved: (val) {
+    //           //setState(() => _user.email = val );
+    //         },
+    //       ),
+    //       SizedBox(
+    //         height: 12,
+    //       ),
+    //       // TextFormField(
+    //       //   decoration: InputDecoration(labelText: 'Password'),
+    //       // )
+    //     ],
+    //   ),
+    // ),
+  );
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Form(
-        key: _formKey,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            TextFormField(
-              decoration: InputDecoration(labelText: 'email'),
-              keyboardType: TextInputType.emailAddress,
-              validator: _validateEmail,
-              onSaved: (val) {
-                //setState(() => _user.email = val );
-              },
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            // TextFormField(
-            //   decoration: InputDecoration(labelText: 'Password'),
-            // )
-          ],
-        ),
-      ),
-    );
+    return AppMainShell(widget: pageBody);
   }
 }
