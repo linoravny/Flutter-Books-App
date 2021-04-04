@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+
+import './menu.dart';
 import '../src/views/pages/books_categories.dart';
 
 class App extends StatefulWidget {
@@ -39,46 +41,61 @@ class _AppState extends State<App> {
         //   )
         //:
         Scaffold(
+      endDrawer: Menu(),
       appBar: AppBar(
-        title: const Text('Books App'),
-        leading: ClipRRect(
-          borderRadius: BorderRadius.circular(9.0),
-          child: Container(
-            color: Color(0xdb7093),
-            padding: EdgeInsets.all(10),
-            child: CircleAvatar(
-              backgroundColor: Color(0xdb7093),
-              backgroundImage: imageFile == null
-                  ? new AssetImage('assets/images/small-person-icon-24.jpg')
-                  : FileImage(File(imageFile.path)),
-            ),
-          ),
-        ),
-        actions: <Widget>[
-          TextButton.icon(
-            icon: Icon(Icons.login, size: 18),
-            label: Text("Login"),
-            style: ButtonStyle(
-              foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-            ),
-            onPressed: () async {},
-          ),
-          IconButton(
-              icon: Icon(Icons.camera_alt_sharp),
-              tooltip: 'Open Device Camera',
-              onPressed: () async {
-                final tmpFile = await _getImage(2);
+        leading: IconButton(
+          icon: Icon(Icons.camera_alt_sharp),
+          tooltip: 'Open Device Camera',
+          onPressed: () async {
+            final tmpFile = await _getImage(2);
 
-                setState(() {
-                  imageFile = tmpFile;
-                });
-              }),
-          IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Menu',
-            onPressed: () async {},
-          ),
-        ],
+            setState(() {
+              imageFile = tmpFile;
+            });
+          },
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              color: Color(0xdb7093),
+              padding: EdgeInsets.all(8),
+              child: CircleAvatar(
+                backgroundColor: Color(0xdb7093),
+                backgroundImage: imageFile == null
+                    ? new AssetImage('assets/images/small-person-icon-24.jpg')
+                    : FileImage(File(imageFile.path)),
+              ),
+            ),
+            Text('Books App'),
+          ],
+        ),
+
+        // actions: <Widget>[
+        //   IconButton(
+        //       icon: Icon(Icons.camera_alt_sharp),
+        //       tooltip: 'Open Device Camera',
+        //       onPressed: () async {
+        //         final tmpFile = await _getImage(2);
+
+        //         setState(() {
+        //           imageFile = tmpFile;
+        //         });
+        //       }),
+        //   ClipRRect(
+        //     borderRadius: BorderRadius.circular(9.0),
+        //     child: Container(
+        //       color: Color(0xdb7093),
+        //       padding: EdgeInsets.all(10),
+        //       child: CircleAvatar(
+        //         backgroundColor: Color(0xdb7093),
+        //         backgroundImage: imageFile == null
+        //             ? new AssetImage('assets/images/small-person-icon-24.jpg')
+        //             : FileImage(File(imageFile.path)),
+        //       ),
+        //     ),
+        //   ),
+        // ],
       ),
       body: pageBody,
     );
