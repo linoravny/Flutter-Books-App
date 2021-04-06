@@ -1,7 +1,9 @@
 import 'package:books_app/src/business_logic/models/user.dart';
+import 'package:books_app/src/business_logic/providers/user_provider.dart';
 import 'package:books_app/src/main-shell.dart';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoginForm extends StatefulWidget {
   static const routeName = '/login';
@@ -17,6 +19,7 @@ class _LoginFormState extends State<LoginForm> {
     password: '',
     phone: null,
     name: '',
+    isAuth: false,
   );
 
   final _emailProvider = FocusNode();
@@ -79,22 +82,30 @@ class _LoginFormState extends State<LoginForm> {
 
     void saveForm() {
       if (_formKey.currentState.validate()) {
-        _formKey.currentState.save();
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text('Processing Data'),
         ));
 
-        // print(
-        //   'email: ' +
-        //       _user.email +
-        //       ' password:' +
-        //       _user.password +
-        //       ' phone: ' +
-        //       _user.phone.toString(),
-        // );
+        _formKey.currentState.save();
+        _user.isAuth = true;
 
-        //save in app root state
+        Provider.of<UserData>(
+          context,
+          listen: false,
+        ).setUserData(_user);
 
+        print(
+          'email: ' +
+              _user.email +
+              ' password:' +
+              _user.password +
+              ' phone: ' +
+              _user.phone.toString() +
+              ' isAuth:' +
+              _user.isAuth.toString(),
+        );
+
+        ScaffoldMessenger.of(context).removeCurrentSnackBar();
         // home navigate
         Navigator.pop(context);
         Navigator.pushNamed(
@@ -128,11 +139,13 @@ class _LoginFormState extends State<LoginForm> {
               },
               onSaved: (value) {
                 _user = User(
-                    id: _user.id,
-                    email: _user.email,
-                    password: _user.password,
-                    phone: int.parse(value),
-                    name: _user.name);
+                  id: _user.id,
+                  email: _user.email,
+                  password: _user.password,
+                  phone: int.parse(value),
+                  name: _user.name,
+                  isAuth: _user.isAuth,
+                );
               },
             ),
 
@@ -156,11 +169,13 @@ class _LoginFormState extends State<LoginForm> {
               },
               onSaved: (value) {
                 _user = User(
-                    id: _user.id,
-                    email: value,
-                    password: _user.password,
-                    phone: _user.phone,
-                    name: _user.name);
+                  id: _user.id,
+                  email: value,
+                  password: _user.password,
+                  phone: _user.phone,
+                  name: _user.name,
+                  isAuth: _user.isAuth,
+                );
               },
             ),
             SizedBox(
@@ -183,11 +198,13 @@ class _LoginFormState extends State<LoginForm> {
               },
               onSaved: (value) {
                 _user = User(
-                    id: _user.id,
-                    email: _user.email,
-                    password: value,
-                    phone: _user.phone,
-                    name: _user.name);
+                  id: _user.id,
+                  email: _user.email,
+                  password: value,
+                  phone: _user.phone,
+                  name: _user.name,
+                  isAuth: _user.isAuth,
+                );
               },
             ),
             SizedBox(

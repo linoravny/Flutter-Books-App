@@ -4,12 +4,14 @@ class User {
   final String email;
   final int phone;
   final String name;
+  bool isAuth;
 
-  const User({
+  User({
     this.id,
     this.password,
     this.email,
     this.phone,
     this.name,
+    this.isAuth,
   });
 }

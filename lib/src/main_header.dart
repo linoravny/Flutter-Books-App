@@ -1,7 +1,9 @@
 import 'dart:io';
 
+import 'package:books_app/src/business_logic/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
 class MainHeader extends StatefulWidget implements PreferredSizeWidget {
   final title;
@@ -25,31 +27,45 @@ class _MainHeaderState extends State<MainHeader> {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      leading: IconButton(
-        icon: Icon(Icons.camera_alt_sharp),
-        tooltip: 'Open Device Camera',
-        onPressed: () async {
-          final tmpFile = await _getImage(2);
+    //listener to provider
+    final userData = Provider.of<UserData>(
+      context,
+    ).userData;
+    final isUserAuth = (userData != null) ? userData.isAuth : false;
+    print('isUserAuth=' + isUserAuth.toString());
 
-          setState(() {
-            imageFile = tmpFile;
-          });
-        },
-      ),
+    return AppBar(
+      leading: (isUserAuth)
+          ? IconButton(
+              icon: Icon(Icons.camera_alt_sharp),
+              tooltip: 'Open Device Camera',
+              onPressed: () async {
+                final tmpFile = await _getImage(2);
+
+                setState(() {
+                  imageFile = tmpFile;
+                });
+              },
+            )
+          : CircleAvatar(
+              backgroundColor: Color(0xdb7093),
+              backgroundImage:
+                  new AssetImage('assets/images/small-person-icon-24.jpg'),
+            ),
       title: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            color: Color(0xdb7093),
-            padding: EdgeInsets.all(8),
-            child: CircleAvatar(
-              backgroundColor: Color(0xdb7093),
-              backgroundImage: imageFile == null
-                  ? new AssetImage('assets/images/small-person-icon-24.jpg')
-                  : FileImage(File(imageFile.path)),
+          if (isUserAuth)
+            Container(
+              color: Color(0xdb7093),
+              padding: EdgeInsets.all(8),
+              child: CircleAvatar(
+                backgroundColor: Color(0xdb7093),
+                backgroundImage: imageFile == null
+                    ? new AssetImage('assets/images/small-person-icon-24.jpg')
+                    : FileImage(File(imageFile.path)),
+              ),
             ),
-          ),
           Text('Books App'),
         ],
       ),
