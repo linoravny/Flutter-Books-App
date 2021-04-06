@@ -1,3 +1,6 @@
+import 'package:books_app/src/views/pages/books_categories.dart';
+import 'package:books_app/src/views/pages/home.dart';
+import 'package:books_app/src/views/pages/login_form.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -15,7 +18,7 @@ class Menu extends StatelessWidget {
             onTap: () => {
               Navigator.pushNamed(
                 context,
-                '/login',
+                LoginForm.routeName,
               ),
             },
           ),
@@ -25,7 +28,7 @@ class Menu extends StatelessWidget {
             onTap: () => {
               Navigator.pushNamed(
                 context,
-                '/home',
+                Home.routeName,
               ),
             },
           ),
@@ -35,7 +38,7 @@ class Menu extends StatelessWidget {
             onTap: () => {
               Navigator.pushNamed(
                 context,
-                '/book-categories',
+                BookCategories.routeName,
               )
             },
           ),

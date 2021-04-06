@@ -1,5 +1,5 @@
+import 'package:books_app/src/views/pages/books_list.dart';
 import 'package:flutter/material.dart';
-import '../../views/pages/books_list.dart';
 
 class CategoryItem extends StatelessWidget {
   final String title;

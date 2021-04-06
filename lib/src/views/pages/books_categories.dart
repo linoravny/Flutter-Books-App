@@ -1,10 +1,12 @@
 import 'package:books_app/src/damy_data/category_data.dart';
 import 'package:books_app/src/main-shell.dart';
-import 'package:books_app/src/views/utils/category_item.dart';
+import 'package:books_app/src/views/widgets/category_item.dart';
 
 import 'package:flutter/material.dart';
 
 class BookCategories extends StatelessWidget {
+  static const routeName = '/bookCategories';
+
   final pageBody = Column(
     children: [
       Center(

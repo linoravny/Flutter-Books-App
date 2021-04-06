@@ -14,13 +14,16 @@ class Main extends StatelessWidget {
     return MaterialApp(
       title: 'Books App',
       theme: appTheme(),
-      //home: App(),
-      initialRoute: '/',
+      home: LoginForm(),
+      //initialRoute: '/',
       routes: {
-        '/': (context) => Home(),
-        '/home': (context) => Home(),
-        '/login': (context) => LoginForm(),
-        '/book-categories': (context) => BookCategories(),
+        LoginForm.routeName: (context) => LoginForm(),
+        Home.routeName: (context) => Home(),
+        BookCategories.routeName: (context) => BookCategories(),
+        // '/': (context) => LoginForm(),
+        // '/home': (context) => Home(),
+        // '/login': (context) => LoginForm(),
+        // '/book-categories': (context) => BookCategories(),
       },
     );
   }
