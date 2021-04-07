@@ -6,6 +6,8 @@ Books App Flutter project.
 - plugins like camera, photo library
 - url launcher
 - navigation
+- video player
+- provider
 
 ## Getting Started
 

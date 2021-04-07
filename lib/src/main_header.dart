@@ -32,7 +32,6 @@ class _MainHeaderState extends State<MainHeader> {
       context,
     ).userData;
     final isUserAuth = (userData != null) ? userData.isAuth : false;
-    print('isUserAuth=' + isUserAuth.toString());
 
     return AppBar(
       leading: (isUserAuth)

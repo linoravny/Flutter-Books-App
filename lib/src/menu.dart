@@ -1,4 +1,3 @@
-import 'package:books_app/src/business_logic/models/user.dart';
 import 'package:books_app/src/views/pages/books_categories.dart';
 import 'package:books_app/src/views/pages/home.dart';
 import 'package:books_app/src/views/pages/login_form.dart';
@@ -44,7 +43,7 @@ class Menu extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.book),
-            title: Text('Books'),
+            title: Text('Books Categories'),
             onTap: () => {
               Navigator.pushNamed(
                 context,
