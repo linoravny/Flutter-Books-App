@@ -1,6 +1,8 @@
-import 'package:books_app/src/views/pages/books_categories.dart';
+import 'package:books_app/src/views/pages/book_categories.dart';
+import 'package:books_app/src/views/pages/fav_book_list.dart';
 import 'package:books_app/src/views/pages/home.dart';
 import 'package:books_app/src/views/pages/login_form.dart';
+import 'package:books_app/src/views/pages/posts.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -62,6 +64,27 @@ class Menu extends StatelessWidget {
                 ).setUserData(null)
               },
             )),
+          ListTile(
+            leading: Icon(Icons.star),
+            title: Text('Posts'),
+            onTap: () => {
+              Navigator.pushNamed(
+                context,
+                PostPage.routeName,
+              )
+            },
+          ),
+          if (isUserAuth)
+            ListTile(
+              leading: Icon(Icons.star),
+              title: Text('My favorit books'),
+              onTap: () => {
+                Navigator.pushNamed(
+                  context,
+                  FavoriteUserBookList.routeName,
+                )
+              },
+            ),
         ],
       ),
     );

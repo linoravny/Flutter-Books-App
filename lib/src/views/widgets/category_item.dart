@@ -1,4 +1,4 @@
-import 'package:books_app/src/views/pages/books_list.dart';
+import 'package:books_app/src/views/pages/book_list.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -11,7 +11,7 @@ class CategoryItem extends StatelessWidget {
     Navigator.of(ctx).push(
       MaterialPageRoute(
         builder: (_) {
-          return BookList();
+          return BookList(title);
         },
       ),
     );

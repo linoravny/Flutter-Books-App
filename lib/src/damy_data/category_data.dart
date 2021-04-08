@@ -5,12 +5,12 @@ import '../business_logic/models/category.dart';
 const DUMMY_CATEGORIES = const [
   Category(
     id: 'c1',
-    title: 'Italian',
+    title: 'Fiction',
     color: Colors.purple,
   ),
   Category(
     id: 'c3',
-    title: 'Hamburgers',
+    title: 'Academic libraries',
     color: Colors.orange,
   ),
   Category(
@@ -20,7 +20,7 @@ const DUMMY_CATEGORIES = const [
   ),
   Category(
     id: 'c6',
-    title: 'Exotic',
+    title: 'Information retrieval',
     color: Colors.green,
   ),
   Category(
@@ -40,7 +40,7 @@ const DUMMY_CATEGORIES = const [
   ),
   Category(
     id: 'c10',
-    title: 'Summer',
+    title: 'Computers',
     color: Colors.teal,
   ),
 ];

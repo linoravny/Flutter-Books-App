@@ -1,3 +1,4 @@
+import 'package:books_app/src/business_logic/models/book.dart';
 import 'package:books_app/src/damy_data/books_data.dart';
 import 'package:books_app/src/main-shell.dart';
 import 'package:books_app/src/views/pages/book_item.dart';
@@ -6,8 +7,15 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class BookList extends StatelessWidget {
+  final String category;
+  BookList(this.category);
+
   @override
   Widget build(BuildContext context) {
+    List<Book> filterBook = DUMMY_BOOKS.where((item) {
+      return item.category == category;
+    }).toList();
+    print('list filter length: ' + filterBook.length.toString());
     final pageHeader = AppBar(
       leading: IconButton(
         icon: Icon(Icons.arrow_back),
@@ -33,7 +41,7 @@ class BookList extends StatelessWidget {
       child: Center(
         child: ListView.builder(
           padding: const EdgeInsets.all(8),
-          itemCount: DUMMY_BOOKS.length,
+          itemCount: filterBook.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
               child: Card(

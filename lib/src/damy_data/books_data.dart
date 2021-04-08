@@ -10,7 +10,7 @@ const DUMMY_BOOKS = const [
       pages: 209,
       title: "Things Fall Apart",
       year: 1958,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Hans Christian Andersen",
       country: "Denmark",
@@ -21,17 +21,17 @@ const DUMMY_BOOKS = const [
       pages: 784,
       title: "Fairy tales",
       year: 1836,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Dante Alighieri",
       country: "Italy",
       imageLink: "images/the-divine-comedy.jpg",
-      language: "Italian",
+      language: "Fiction",
       link: "https://en.wikipedia.org/wiki/Divine_Comedy",
       pages: 928,
       title: "The Divine Comedy",
       year: 1315,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Unknown",
       country: "Sumer and Akkadian Empire",
@@ -41,7 +41,7 @@ const DUMMY_BOOKS = const [
       pages: 160,
       title: "The Epic Of Gilgamesh",
       year: -1700,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Unknown",
       country: "Achaemenid Empire",
@@ -51,7 +51,7 @@ const DUMMY_BOOKS = const [
       pages: 176,
       title: "The Book Of Job",
       year: -600,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Unknown",
       country: "India/Iran/Iraq/Egypt/Tajikistan",
@@ -61,7 +61,7 @@ const DUMMY_BOOKS = const [
       pages: 288,
       title: "One Thousand and One Nights",
       year: 1200,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Unknown",
       country: "Iceland",
@@ -71,7 +71,7 @@ const DUMMY_BOOKS = const [
       pages: 384,
       title: "Nj\u00e1l's Saga",
       year: 1350,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Jane Austen",
       country: "United Kingdom",
@@ -81,7 +81,7 @@ const DUMMY_BOOKS = const [
       pages: 226,
       title: "Pride and Prejudice",
       year: 1813,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Honor\u00e9 de Balzac",
       country: "France",
@@ -91,7 +91,7 @@ const DUMMY_BOOKS = const [
       pages: 443,
       title: "Le P\u00e8re Goriot",
       year: 1835,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Samuel Beckett",
       country: "Republic of Ireland",
@@ -101,17 +101,17 @@ const DUMMY_BOOKS = const [
       pages: 256,
       title: "Molloy, Malone Dies, The Unnamable, the trilogy",
       year: 1952,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Giovanni Boccaccio",
       country: "Italy",
       imageLink: "images/the-decameron.jpg",
-      language: "Italian",
+      language: "Fiction",
       link: "https://en.wikipedia.org/wiki/The_Decameron",
       pages: 1024,
       title: "The Decameron",
       year: 1351,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Jorge Luis Borges",
       country: "Argentina",
@@ -121,7 +121,7 @@ const DUMMY_BOOKS = const [
       pages: 224,
       title: "Ficciones",
       year: 1965,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Emily Bront\u00eb",
       country: "United Kingdom",
@@ -131,7 +131,7 @@ const DUMMY_BOOKS = const [
       pages: 342,
       title: "Wuthering Heights",
       year: 1847,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Albert Camus",
       country: "Algeria, French Empire",
@@ -141,7 +141,7 @@ const DUMMY_BOOKS = const [
       pages: 185,
       title: "The Stranger",
       year: 1942,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Paul Celan",
       country: "Romania, France",
@@ -151,7 +151,7 @@ const DUMMY_BOOKS = const [
       pages: 320,
       title: "Poems",
       year: 1952,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Louis-Ferdinand C\u00e9line",
       country: "France",
@@ -161,7 +161,7 @@ const DUMMY_BOOKS = const [
       pages: 505,
       title: "Journey to the End of the Night",
       year: 1932,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Miguel de Cervantes",
       country: "Spain",
@@ -171,7 +171,7 @@ const DUMMY_BOOKS = const [
       pages: 1056,
       title: "Don Quijote De La Mancha",
       year: 1610,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Geoffrey Chaucer",
       country: "England",
@@ -181,7 +181,7 @@ const DUMMY_BOOKS = const [
       pages: 544,
       title: "The Canterbury Tales",
       year: 1450,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Anton Chekhov",
       country: "Russia",
@@ -192,7 +192,7 @@ const DUMMY_BOOKS = const [
       pages: 194,
       title: "Stories",
       year: 1886,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Joseph Conrad",
       country: "United Kingdom",
@@ -202,7 +202,7 @@ const DUMMY_BOOKS = const [
       pages: 320,
       title: "Nostromo",
       year: 1904,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Charles Dickens",
       country: "United Kingdom",
@@ -212,7 +212,7 @@ const DUMMY_BOOKS = const [
       pages: 194,
       title: "Great Expectations",
       year: 1861,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Denis Diderot",
       country: "France",
@@ -222,7 +222,7 @@ const DUMMY_BOOKS = const [
       pages: 596,
       title: "Jacques the Fatalist",
       year: 1796,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Alfred D\u00f6blin",
       country: "Germany",
@@ -232,7 +232,7 @@ const DUMMY_BOOKS = const [
       pages: 600,
       title: "Berlin Alexanderplatz",
       year: 1929,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Fyodor Dostoevsky",
       country: "Russia",
@@ -242,7 +242,7 @@ const DUMMY_BOOKS = const [
       pages: 551,
       title: "Crime and Punishment",
       year: 1866,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Fyodor Dostoevsky",
       country: "Russia",
@@ -252,7 +252,7 @@ const DUMMY_BOOKS = const [
       pages: 656,
       title: "The Idiot",
       year: 1869,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Fyodor Dostoevsky",
       country: "Russia",
@@ -262,7 +262,7 @@ const DUMMY_BOOKS = const [
       pages: 768,
       title: "The Possessed",
       year: 1872,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Fyodor Dostoevsky",
       country: "Russia",
@@ -272,7 +272,7 @@ const DUMMY_BOOKS = const [
       pages: 824,
       title: "The Brothers Karamazov",
       year: 1880,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "George Eliot",
       country: "United Kingdom",
@@ -282,7 +282,7 @@ const DUMMY_BOOKS = const [
       pages: 800,
       title: "Middlemarch",
       year: 1871,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Ralph Ellison",
       country: "United States",
@@ -292,7 +292,7 @@ const DUMMY_BOOKS = const [
       pages: 581,
       title: "Invisible Man",
       year: 1952,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Euripides",
       country: "Greece",
@@ -302,7 +302,7 @@ const DUMMY_BOOKS = const [
       pages: 104,
       title: "Medea",
       year: -431,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "William Faulkner",
       country: "United States",
@@ -312,7 +312,7 @@ const DUMMY_BOOKS = const [
       pages: 313,
       title: "Absalom, Absalom!",
       year: 1936,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "William Faulkner",
       country: "United States",
@@ -322,7 +322,7 @@ const DUMMY_BOOKS = const [
       pages: 326,
       title: "The Sound and the Fury",
       year: 1929,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Gustave Flaubert",
       country: "France",
@@ -332,7 +332,7 @@ const DUMMY_BOOKS = const [
       pages: 528,
       title: "Madame Bovary",
       year: 1857,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Gustave Flaubert",
       country: "France",
@@ -342,7 +342,7 @@ const DUMMY_BOOKS = const [
       pages: 606,
       title: "Sentimental Education",
       year: 1869,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Federico Garc\u00eda Lorca",
       country: "Spain",
@@ -352,7 +352,7 @@ const DUMMY_BOOKS = const [
       pages: 218,
       title: "Gypsy Ballads",
       year: 1928,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Gabriel Garc\u00eda M\u00e1rquez",
       country: "Colombia",
@@ -362,7 +362,7 @@ const DUMMY_BOOKS = const [
       pages: 417,
       title: "One Hundred Years of Solitude",
       year: 1967,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Gabriel Garc\u00eda M\u00e1rquez",
       country: "Colombia",
@@ -372,7 +372,7 @@ const DUMMY_BOOKS = const [
       pages: 368,
       title: "Love in the Time of Cholera",
       year: 1985,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Johann Wolfgang von Goethe",
       country: "Saxe-Weimar",
@@ -382,7 +382,7 @@ const DUMMY_BOOKS = const [
       pages: 158,
       title: "Faust",
       year: 1832,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Nikolai Gogol",
       country: "Russia",
@@ -392,7 +392,7 @@ const DUMMY_BOOKS = const [
       pages: 432,
       title: "Dead Souls",
       year: 1842,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "G\u00fcnter Grass",
       country: "Germany",
@@ -402,7 +402,7 @@ const DUMMY_BOOKS = const [
       pages: 600,
       title: "The Tin Drum",
       year: 1959,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Jo\u00e3o Guimar\u00e3es Rosa",
       country: "Brazil",
@@ -412,7 +412,7 @@ const DUMMY_BOOKS = const [
       pages: 494,
       title: "The Devil to Pay in the Backlands",
       year: 1956,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Knut Hamsun",
       country: "Norway",
@@ -422,7 +422,7 @@ const DUMMY_BOOKS = const [
       pages: 176,
       title: "Hunger",
       year: 1890,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Ernest Hemingway",
       country: "United States",
@@ -432,7 +432,7 @@ const DUMMY_BOOKS = const [
       pages: 128,
       title: "The Old Man and the Sea",
       year: 1952,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Homer",
       country: "Greece",
@@ -442,7 +442,7 @@ const DUMMY_BOOKS = const [
       pages: 608,
       title: "Iliad",
       year: -735,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Homer",
       country: "Greece",
@@ -452,7 +452,7 @@ const DUMMY_BOOKS = const [
       pages: 374,
       title: "Odyssey",
       year: -800,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Henrik Ibsen",
       country: "Norway",
@@ -462,7 +462,7 @@ const DUMMY_BOOKS = const [
       pages: 68,
       title: "A Doll's House",
       year: 1879,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "James Joyce",
       country: "Irish Free State",
@@ -472,7 +472,7 @@ const DUMMY_BOOKS = const [
       pages: 228,
       title: "Ulysses",
       year: 1922,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Franz Kafka",
       country: "Czechoslovakia",
@@ -483,7 +483,7 @@ const DUMMY_BOOKS = const [
       pages: 488,
       title: "Stories",
       year: 1924,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Franz Kafka",
       country: "Czechoslovakia",
@@ -493,7 +493,7 @@ const DUMMY_BOOKS = const [
       pages: 160,
       title: "The Trial",
       year: 1925,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Franz Kafka",
       country: "Czechoslovakia",
@@ -503,7 +503,7 @@ const DUMMY_BOOKS = const [
       pages: 352,
       title: "The Castle",
       year: 1926,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "K\u0101lid\u0101sa",
       country: "India",
@@ -514,7 +514,7 @@ const DUMMY_BOOKS = const [
       pages: 147,
       title: "The recognition of Shakuntala",
       year: 150,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Yasunari Kawabata",
       country: "Japan",
@@ -524,7 +524,7 @@ const DUMMY_BOOKS = const [
       pages: 288,
       title: "The Sound of the Mountain",
       year: 1954,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Nikos Kazantzakis",
       country: "Greece",
@@ -534,7 +534,7 @@ const DUMMY_BOOKS = const [
       pages: 368,
       title: "Zorba the Greek",
       year: 1946,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "D. H. Lawrence",
       country: "United Kingdom",
@@ -544,7 +544,7 @@ const DUMMY_BOOKS = const [
       pages: 432,
       title: "Sons and Lovers",
       year: 1913,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Halld\u00f3r Laxness",
       country: "Iceland",
@@ -554,17 +554,17 @@ const DUMMY_BOOKS = const [
       pages: 470,
       title: "Independent People",
       year: 1934,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Giacomo Leopardi",
       country: "Italy",
       imageLink: "images/poems-giacomo-leopardi.jpg",
-      language: "Italian",
+      language: "Fiction",
       link: "",
       pages: 184,
       title: "Poems",
       year: 1818,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Doris Lessing",
       country: "United Kingdom",
@@ -574,7 +574,7 @@ const DUMMY_BOOKS = const [
       pages: 688,
       title: "The Golden Notebook",
       year: 1962,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Astrid Lindgren",
       country: "Sweden",
@@ -584,7 +584,7 @@ const DUMMY_BOOKS = const [
       pages: 160,
       title: "Pippi Longstocking",
       year: 1945,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Lu Xun",
       country: "China",
@@ -594,7 +594,7 @@ const DUMMY_BOOKS = const [
       pages: 389,
       title: "Diary of a Madman",
       year: 1918,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Naguib Mahfouz",
       country: "Egypt",
@@ -604,7 +604,7 @@ const DUMMY_BOOKS = const [
       pages: 355,
       title: "Children of Gebelawi",
       year: 1959,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Thomas Mann",
       country: "Germany",
@@ -614,7 +614,7 @@ const DUMMY_BOOKS = const [
       pages: 736,
       title: "Buddenbrooks",
       year: 1901,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Thomas Mann",
       country: "Germany",
@@ -624,7 +624,7 @@ const DUMMY_BOOKS = const [
       pages: 720,
       title: "The Magic Mountain",
       year: 1924,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Herman Melville",
       country: "United States",
@@ -634,7 +634,7 @@ const DUMMY_BOOKS = const [
       pages: 378,
       title: "Moby Dick",
       year: 1851,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Michel de Montaigne",
       country: "France",
@@ -644,17 +644,17 @@ const DUMMY_BOOKS = const [
       pages: 404,
       title: "Essays",
       year: 1595,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Elsa Morante",
       country: "Italy",
       imageLink: "images/history.jpg",
-      language: "Italian",
+      language: "Fiction",
       link: "https://en.wikipedia.org/wiki/History_(novel)",
       pages: 600,
       title: "History",
       year: 1974,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Toni Morrison",
       country: "United States",
@@ -664,7 +664,7 @@ const DUMMY_BOOKS = const [
       pages: 321,
       title: "Beloved",
       year: 1987,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Murasaki Shikibu",
       country: "Japan",
@@ -674,7 +674,7 @@ const DUMMY_BOOKS = const [
       pages: 1360,
       title: "The Tale of Genji",
       year: 1006,
-      category: "Hamburgers"),
+      category: "Academic libraries"),
   Book(
       author: "Robert Musil",
       country: "Austria",
@@ -684,7 +684,7 @@ const DUMMY_BOOKS = const [
       pages: 365,
       title: "The Man Without Qualities",
       year: 1931,
-      category: "Hamburgers"),
+      category: "Academic libraries"),
   Book(
       author: "Vladimir Nabokov",
       country: "Russia/United States",
@@ -694,7 +694,7 @@ const DUMMY_BOOKS = const [
       pages: 317,
       title: "Lolita",
       year: 1955,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "George Orwell",
       country: "United Kingdom",
@@ -704,7 +704,7 @@ const DUMMY_BOOKS = const [
       pages: 272,
       title: "Nineteen Eighty-Four",
       year: 1949,
-      category: "Exotic"),
+      category: "Information retrieval"),
   Book(
       author: "Ovid",
       country: "Roman Empire",
@@ -714,7 +714,7 @@ const DUMMY_BOOKS = const [
       pages: 576,
       title: "Metamorphoses",
       year: 100,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Fernando Pessoa",
       country: "Portugal",
@@ -724,7 +724,7 @@ const DUMMY_BOOKS = const [
       pages: 272,
       title: "The Book of Disquiet",
       year: 1928,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Edgar Allan Poe",
       country: "United States",
@@ -734,7 +734,7 @@ const DUMMY_BOOKS = const [
       pages: 842,
       title: "Tales",
       year: 1950,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Marcel Proust",
       country: "France",
@@ -764,7 +764,7 @@ const DUMMY_BOOKS = const [
       pages: 124,
       title: "Pedro P\u00e1ramo",
       year: 1955,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Rumi",
       country: "Sultanate of Rum",
@@ -774,7 +774,7 @@ const DUMMY_BOOKS = const [
       pages: 438,
       title: "The Masnavi",
       year: 1236,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Salman Rushdie",
       country: "United Kingdom, India",
@@ -784,7 +784,7 @@ const DUMMY_BOOKS = const [
       pages: 536,
       title: "Midnight's Children",
       year: 1981,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Saadi",
       country: "Persia, Persian Empire",
@@ -794,7 +794,7 @@ const DUMMY_BOOKS = const [
       pages: 298,
       title: "Bostan",
       year: 1257,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Tayeb Salih",
       country: "Sudan",
@@ -804,7 +804,7 @@ const DUMMY_BOOKS = const [
       pages: 139,
       title: "Season of Migration to the North",
       year: 1966,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Jos\u00e9 Saramago",
       country: "Portugal",
@@ -814,7 +814,7 @@ const DUMMY_BOOKS = const [
       pages: 352,
       title: "Blindness",
       year: 1995,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "William Shakespeare",
       country: "England",
@@ -824,7 +824,7 @@ const DUMMY_BOOKS = const [
       pages: 432,
       title: "Hamlet",
       year: 1603,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "William Shakespeare",
       country: "England",
@@ -834,7 +834,7 @@ const DUMMY_BOOKS = const [
       pages: 384,
       title: "King Lear",
       year: 1608,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "William Shakespeare",
       country: "England",
@@ -854,7 +854,7 @@ const DUMMY_BOOKS = const [
       pages: 88,
       title: "Oedipus the King",
       year: -430,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Stendhal",
       country: "France",
@@ -864,7 +864,7 @@ const DUMMY_BOOKS = const [
       pages: 576,
       title: "The Red and the Black",
       year: 1830,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Laurence Sterne",
       country: "England",
@@ -875,17 +875,17 @@ const DUMMY_BOOKS = const [
       pages: 640,
       title: "The Life And Opinions of Tristram Shandy",
       year: 1760,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Italo Svevo",
       country: "Italy",
       imageLink: "images/confessions-of-zeno.jpg",
-      language: "Italian",
+      language: "Fiction",
       link: "https://en.wikipedia.org/wiki/Zeno%27s_Conscience",
       pages: 412,
       title: "Confessions of Zeno",
       year: 1923,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Jonathan Swift",
       country: "Ireland",
@@ -895,7 +895,7 @@ const DUMMY_BOOKS = const [
       pages: 178,
       title: "Gulliver's Travels",
       year: 1726,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Leo Tolstoy",
       country: "Russia",
@@ -905,7 +905,7 @@ const DUMMY_BOOKS = const [
       pages: 1296,
       title: "War and Peace",
       year: 1867,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Leo Tolstoy",
       country: "Russia",
@@ -935,7 +935,7 @@ const DUMMY_BOOKS = const [
       pages: 224,
       title: "The Adventures of Huckleberry Finn",
       year: 1884,
-      category: "Summer"),
+      category: "Information retrieval"),
   Book(
       author: "Valmiki",
       country: "India",
@@ -945,7 +945,7 @@ const DUMMY_BOOKS = const [
       pages: 152,
       title: "Ramayana",
       year: -450,
-      category: "Summer"),
+      category: "Information retrieval"),
   Book(
       author: "Virgil",
       country: "Roman Empire",
@@ -955,7 +955,7 @@ const DUMMY_BOOKS = const [
       pages: 442,
       title: "The Aeneid",
       year: -23,
-      category: "Summer"),
+      category: "Information retrieval"),
   Book(
       author: "Vyasa",
       country: "India",
@@ -965,7 +965,7 @@ const DUMMY_BOOKS = const [
       pages: 276,
       title: "Mahabharata",
       year: -700,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Walt Whitman",
       country: "United States",
@@ -975,7 +975,7 @@ const DUMMY_BOOKS = const [
       pages: 152,
       title: "Leaves of Grass",
       year: 1855,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Virginia Woolf",
       country: "United Kingdom",
@@ -985,7 +985,7 @@ const DUMMY_BOOKS = const [
       pages: 216,
       title: "Mrs Dalloway",
       year: 1925,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Virginia Woolf",
       country: "United Kingdom",
@@ -995,7 +995,7 @@ const DUMMY_BOOKS = const [
       pages: 209,
       title: "To the Lighthouse",
       year: 1927,
-      category: "Italian"),
+      category: "Fiction"),
   Book(
       author: "Marguerite Yourcenar",
       country: "France/Belgium",
@@ -1005,5 +1005,5 @@ const DUMMY_BOOKS = const [
       pages: 408,
       title: "Memoirs of Hadrian",
       year: 1951,
-      category: "Summer")
+      category: "Information retrieval")
 ];

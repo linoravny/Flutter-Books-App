@@ -1,7 +1,7 @@
 import 'package:books_app/src/main-shell.dart';
+import 'package:books_app/src/views/widgets/add_book.dart';
 
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 
 class Home extends StatefulWidget {
   static const routeName = '/home';
@@ -11,26 +11,17 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  VideoPlayerController _controller;
+  BuildContext dialogContext;
 
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-      'https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4',
-    )..initialize().then(
-        (_) {
-          // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-          setState(() {});
-        },
-      );
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -41,23 +32,26 @@ class _HomeState extends State<Home> {
           child: Text('Home Page with video'),
         ),
         Center(
-          child: _controller.value.isInitialized
-              ? AspectRatio(
-                  aspectRatio: _controller.value.aspectRatio,
-                  child: VideoPlayer(_controller),
-                )
-              : Container(),
+          child: Text('page body'),
         ),
-        FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              _controller.value.isPlaying
-                  ? _controller.pause()
-                  : _controller.play();
-            });
-          },
-          child: Icon(
-            _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+        Expanded(
+          child: Align(
+            alignment: FractionalOffset.bottomCenter,
+            child: FloatingActionButton(
+              onPressed: () {
+                //open modal:
+                showDialog<void>(
+                  context: context,
+                  barrierDismissible: false,
+                  builder: (BuildContext context) {
+                    dialogContext = context;
+                    return AddBook();
+                  },
+                );
+              },
+              child: Icon(Icons.add),
+              tooltip: 'add custom book to your list',
+            ),
           ),
         ),
       ],

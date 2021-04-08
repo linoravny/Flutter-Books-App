@@ -1,6 +1,6 @@
 # books_app
 
-Books App Flutter project.
+Books App - Flutter project.
 
 - flutter widgets
 - plugins like camera, photo library
