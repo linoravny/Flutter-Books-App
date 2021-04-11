@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
       children: [
         Padding(
           padding: const EdgeInsets.all(15),
-          child: Text('Home Page with video'),
+          child: Text('Home Page'),
         ),
         Center(
           child: Text('page body'),
