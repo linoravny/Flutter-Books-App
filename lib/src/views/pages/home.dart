@@ -2,6 +2,7 @@ import 'package:books_app/src/main-shell.dart';
 import 'package:books_app/src/views/widgets/add_book.dart';
 
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class Home extends StatefulWidget {
   static const routeName = '/home';
@@ -32,7 +33,55 @@ class _HomeState extends State<Home> {
           child: Text('Home Page'),
         ),
         Center(
-          child: Text('page body'),
+          child: Container(
+            child: Column(
+              children: [
+                CircularStepProgressIndicator(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('2/5'),
+                          Text('hello, user'),
+                          Text('status'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  totalSteps: 100,
+                  currentStep: 40,
+                  //roundedCap: (_, __) => true,
+                  selectedStepSize: 15,
+                  selectedColor: Colors.orange,
+                  unselectedColor: Colors.grey[200],
+                  // gradientColor: LinearGradient(
+                  //   colors: [Colors.orange, Colors.grey],
+                  // ),
+                  width: 150,
+                  height: 150,
+                  padding: 0,
+                  roundedCap: (index, isSelected) {
+                    if (isSelected) {
+                      return true;
+                    }
+                    return false;
+                  },
+                  // customStepSize: (index, isSelected) {
+                  //   if (isSelected) {
+                  //     return 10;
+                  //   }
+                  //   return 5;
+                  // },
+
+                  // selectedStepSize: 25,
+                  // unselectedStepSize: 10,
+                ),
+              ],
+            ),
+          ),
         ),
         Expanded(
           child: Align(
