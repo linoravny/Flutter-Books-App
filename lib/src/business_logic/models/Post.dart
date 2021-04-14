@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Post {
   final int userId;
   final int id;
@@ -7,12 +5,12 @@ class Post {
   final String body;
 
   Post({
-    @required this.userId,
-    @required this.id,
+    this.userId,
+    this.id,
     this.title,
     this.body,
   });
-  factory Post.fromJson(Map<String, dynamic> json) {
+  factory Post.fromJson(dynamic json) {
     return Post(
       userId: json['userId'] as int,
       id: json['id'] as int,

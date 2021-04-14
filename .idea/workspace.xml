@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d984b6b8-5ce1-46a5-8f57-71465964a7e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/src/views/pages/books_categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/books_categories.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/pages/books_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/books_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/business_logic/models/Post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/business_logic/models/Post.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/business_logic/providers/user_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/business_logic/providers/user_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main_header.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/menu.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/views/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/views/pages/login_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/login_form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/utils/book_item.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/utils/category_item.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/views/pages/posts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/posts.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/views/widgets/add_book.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

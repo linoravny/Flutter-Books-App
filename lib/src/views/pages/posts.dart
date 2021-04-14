@@ -1,8 +1,13 @@
+import 'dart:developer';
+
 import 'package:books_app/src/business_logic/models/post.dart';
+import 'package:books_app/src/business_logic/providers/posts_provider.dart';
 import 'package:books_app/src/business_logic/services/main_service_api.dart';
 import 'package:books_app/src/main-shell.dart';
+import 'package:books_app/src/views/widgets/add_post.dart';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class PostPage extends StatefulWidget {
   static const routeName = '/PostPage';
@@ -13,24 +18,53 @@ class PostPage extends StatefulWidget {
 
 class _PostPageState extends State<PostPage> {
   List<Post> postData = [];
+  bool _isInit = false;
+  bool _isLoading = false;
+
   HttpService apiService = new HttpService();
-  void _getPosts() {
-    apiService.fetchAppPosts().then((response) {
-      setState(() {
-        postData = response;
-        print(postData[0].title);
-      });
-    });
-  }
 
   @override
   initState() {
-    _getPosts();
+    print('_______PostPage initState()');
     super.initState();
   }
 
   @override
+  void didChangeDependencies() {
+    // befor build run
+    print('_______PostPage didChangeDependencies()');
+    // if (_isInit) {
+    setState(() {
+      _isLoading = true;
+    });
+
+    Provider.of<PostsProvider>(
+      context,
+      listen: false,
+    ).fetchAndsetPosts().then(
+          (_) => {
+            postData = Provider.of<PostsProvider>(
+              context,
+              listen: false,
+            ).getPosts,
+            setState(() {
+              _isLoading = false;
+            }),
+          },
+        );
+    //}
+
+    //_isInit = false;
+    super.didChangeDependencies();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<PostsProvider>(
+      context,
+      listen: false,
+    );
+
     Widget _buildProgressIndicator() {
       return new Padding(
         padding: const EdgeInsets.all(8.0),
@@ -42,18 +76,57 @@ class _PostPageState extends State<PostPage> {
       );
     }
 
+    final pageHeader = AppBar(
+      leading: IconButton(
+        icon: Icon(Icons.add),
+        tooltip: 'add post',
+        onPressed: () {
+          showDialog<void>(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return AddPost();
+            },
+          );
+        },
+      ),
+      iconTheme: IconThemeData(
+        color: Colors.white, //change your color here
+      ),
+      title: Text('Posts'),
+    );
+
     final pageBody = Container(
-      child: (postData.length == 0)
+      child: (_isLoading)
           ? _buildProgressIndicator()
           : ListView.builder(
               itemCount: postData.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text("$index: " + postData[index].title),
+                return Column(
+                  children: [
+                    ListTile(
+                      leading: const Icon(Icons.comment),
+                      title: Text("$index / " + postData.length.toString()),
+                      subtitle: Text(postData[index].title),
+                      contentPadding: EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: 15,
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.grey,
+                    ),
+                  ],
                 );
               },
             ),
     );
-    return AppMainShell(widget: pageBody);
+    return ChangeNotifierProvider<PostsProvider>(
+      create: (_) => PostsProvider(),
+      child: AppMainShell(
+        widget: pageBody,
+        customAppHeader: pageHeader,
+      ),
+    );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:books_app/src/business_logic/models/user.dart';
 import 'package:flutter/material.dart';
 
-class UserData with ChangeNotifier {
+class UserProvider with ChangeNotifier {
   //with is mixin.
   User _usr;
 

@@ -11,7 +11,7 @@ import 'business_logic/providers/user_provider.dart';
 class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final userData = Provider.of<UserData>(
+    final userData = Provider.of<UserProvider>(
       context,
     ).userData;
     final isUserAuth = (userData != null) ? userData.isAuth : false;
@@ -58,7 +58,7 @@ class Menu extends StatelessWidget {
               leading: Icon(Icons.logout, size: 18),
               title: Text('Logout'),
               onTap: () => {
-                Provider.of<UserData>(
+                Provider.of<UserProvider>(
                   context,
                   listen: false,
                 ).setUserData(null)

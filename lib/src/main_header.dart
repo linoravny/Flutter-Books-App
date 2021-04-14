@@ -28,7 +28,7 @@ class _MainHeaderState extends State<MainHeader> {
   @override
   Widget build(BuildContext context) {
     //listener to provider
-    final userData = Provider.of<UserData>(
+    final userData = Provider.of<UserProvider>(
       context,
     ).userData;
     final isUserAuth = (userData != null) ? userData.isAuth : false;

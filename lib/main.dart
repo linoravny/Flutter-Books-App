@@ -1,3 +1,4 @@
+import 'package:books_app/src/business_logic/providers/posts_provider.dart';
 import 'package:books_app/src/business_logic/providers/user_provider.dart';
 import 'package:books_app/src/views/pages/book_categories.dart';
 import 'package:books_app/src/views/pages/fav_book_list.dart';
@@ -16,12 +17,26 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //wrap all app in provider but only listener widget will be rebuild
-    return ChangeNotifierProvider(
-      create: (_) => UserData(),
+
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<UserProvider>(
+          create: (_) => UserProvider(),
+        ),
+        ChangeNotifierProvider<PostsProvider>(
+          create: (_) => PostsProvider(),
+        ),
+        // ChangeNotifierProvider.value(
+        //   value: UserProvider(),
+        // ),
+        // ChangeNotifierProvider.value(
+        //   value: PostsProvider(),
+        // ),
+      ],
       child: MaterialApp(
         title: 'Books App',
         theme: appTheme(),
-        home: LoginForm(),
+        home: Home(),
         //initialRoute: '/',
         routes: {
           LoginForm.routeName: (context) => LoginForm(),

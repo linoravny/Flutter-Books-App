@@ -89,7 +89,7 @@ class _LoginFormState extends State<LoginForm> {
         _formKey.currentState.save();
         _user.isAuth = true;
 
-        Provider.of<UserData>(
+        Provider.of<UserProvider>(
           context,
           listen: false,
         ).setUserData(_user);

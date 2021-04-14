@@ -1,5 +1,5 @@
 import 'package:books_app/src/main-shell.dart';
-import 'package:books_app/src/views/widgets/add_book.dart';
+import 'package:books_app/src/views/widgets/add_post.dart';
 
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
@@ -19,18 +19,14 @@ class _HomeState extends State<Home> {
     super.initState();
   }
 
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
+    int postAddedCount = 0;
     final pageBody = Column(
       children: [
         Padding(
           padding: const EdgeInsets.all(15),
-          child: Text('Home Page'),
+          child: Text('You can add $postAddedCount new post'),
         ),
         Center(
           child: Container(
@@ -44,22 +40,17 @@ class _HomeState extends State<Home> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('2/5'),
+                          Text('$postAddedCount/5'),
                           Text('hello, user'),
-                          Text('status'),
                         ],
                       ),
                     ],
                   ),
                   totalSteps: 100,
-                  currentStep: 40,
-                  //roundedCap: (_, __) => true,
+                  currentStep: postAddedCount * 20,
                   selectedStepSize: 15,
                   selectedColor: Colors.orange,
                   unselectedColor: Colors.grey[200],
-                  // gradientColor: LinearGradient(
-                  //   colors: [Colors.orange, Colors.grey],
-                  // ),
                   width: 150,
                   height: 150,
                   padding: 0,
@@ -69,15 +60,6 @@ class _HomeState extends State<Home> {
                     }
                     return false;
                   },
-                  // customStepSize: (index, isSelected) {
-                  //   if (isSelected) {
-                  //     return 10;
-                  //   }
-                  //   return 5;
-                  // },
-
-                  // selectedStepSize: 25,
-                  // unselectedStepSize: 10,
                 ),
               ],
             ),
@@ -94,12 +76,12 @@ class _HomeState extends State<Home> {
                   barrierDismissible: false,
                   builder: (BuildContext context) {
                     dialogContext = context;
-                    return AddBook();
+                    return AddPost();
                   },
                 );
               },
               child: Icon(Icons.add),
-              tooltip: 'add custom book to your list',
+              tooltip: 'Add Post',
             ),
           ),
         ),
