@@ -26,18 +26,11 @@ class Main extends StatelessWidget {
         ChangeNotifierProvider<PostsProvider>(
           create: (_) => PostsProvider(),
         ),
-        // ChangeNotifierProvider.value(
-        //   value: UserProvider(),
-        // ),
-        // ChangeNotifierProvider.value(
-        //   value: PostsProvider(),
-        // ),
       ],
       child: MaterialApp(
         title: 'Books App',
         theme: appTheme(),
         home: Home(),
-        //initialRoute: '/',
         routes: {
           LoginForm.routeName: (context) => LoginForm(),
           Home.routeName: (context) => Home(),

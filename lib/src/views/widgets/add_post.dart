@@ -33,21 +33,13 @@ class _AddPostState extends State<AddPost> {
         print(
           'title: ' + _post.title,
         );
-
-        Provider.of<PostsProvider>(
-          context,
-          listen: false,
-        ).addNewPost(_post).then(
+        context.read<PostsProvider>().addNewPost(_post).then(
               (res) => {
                 ScaffoldMessenger.of(context).hideCurrentSnackBar(),
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   content: Text('Added successfuly :) '),
                 )),
-                Provider.of<PostsProvider>(
-                  context,
-                  listen: false,
-                ).setCounter(5.8),
-                Navigator.of(context).pop(),
+                Navigator.of(context).pop()
               },
             );
       } else {

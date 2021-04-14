@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:books_app/src/business_logic/models/post.dart';
 import 'package:books_app/src/business_logic/providers/posts_provider.dart';
 import 'package:books_app/src/business_logic/services/main_service_api.dart';
@@ -18,7 +16,6 @@ class PostPage extends StatefulWidget {
 
 class _PostPageState extends State<PostPage> {
   List<Post> postData = [];
-  bool _isInit = false;
   bool _isLoading = false;
 
   HttpService apiService = new HttpService();
@@ -32,38 +29,24 @@ class _PostPageState extends State<PostPage> {
   @override
   void didChangeDependencies() {
     // befor build run
-    print('_______PostPage didChangeDependencies()');
-    // if (_isInit) {
     setState(() {
       _isLoading = true;
     });
 
-    Provider.of<PostsProvider>(
-      context,
-      listen: false,
-    ).fetchAndsetPosts().then(
+    context.read<PostsProvider>().fetchAndsetPosts().then(
           (_) => {
-            postData = Provider.of<PostsProvider>(
-              context,
-              listen: false,
-            ).getPosts,
             setState(() {
               _isLoading = false;
             }),
           },
         );
-    //}
 
-    //_isInit = false;
     super.didChangeDependencies();
   }
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<PostsProvider>(
-      context,
-      listen: false,
-    );
+    postData = context.read<PostsProvider>().getPosts;
 
     Widget _buildProgressIndicator() {
       return new Padding(
@@ -87,7 +70,9 @@ class _PostPageState extends State<PostPage> {
             builder: (BuildContext context) {
               return AddPost();
             },
-          );
+          ).then((_) => {
+                setState(() {}),
+              });
         },
       ),
       iconTheme: IconThemeData(
