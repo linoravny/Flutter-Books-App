@@ -16,7 +16,9 @@ class PostPage extends StatefulWidget {
 
 class _PostPageState extends State<PostPage> {
   List<Post> postData = [];
+  List<Post> userAddedPostData = [];
   bool _isLoading = false;
+  int postAddedCount = 0;
 
   HttpService apiService = new HttpService();
 
@@ -47,6 +49,8 @@ class _PostPageState extends State<PostPage> {
   @override
   Widget build(BuildContext context) {
     postData = context.read<PostsProvider>().getPosts;
+    userAddedPostData = context.read<PostsProvider>().getUserAddedPosts;
+    postAddedCount = userAddedPostData.length;
 
     Widget _buildProgressIndicator() {
       return new Padding(
@@ -60,21 +64,23 @@ class _PostPageState extends State<PostPage> {
     }
 
     final pageHeader = AppBar(
-      leading: IconButton(
-        icon: Icon(Icons.add),
-        tooltip: 'add post',
-        onPressed: () {
-          showDialog<void>(
-            context: context,
-            barrierDismissible: false,
-            builder: (BuildContext context) {
-              return AddPost();
-            },
-          ).then((_) => {
-                setState(() {}),
-              });
-        },
-      ),
+      leading: (postAddedCount < 5)
+          ? IconButton(
+              icon: Icon(Icons.add),
+              tooltip: 'add post',
+              onPressed: () {
+                showDialog<void>(
+                  context: context,
+                  barrierDismissible: false,
+                  builder: (BuildContext context) {
+                    return AddPost();
+                  },
+                ).then((_) => {
+                      setState(() {}),
+                    });
+              },
+            )
+          : null,
       iconTheme: IconThemeData(
         color: Colors.white, //change your color here
       ),

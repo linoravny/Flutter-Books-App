@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d984b6b8-5ce1-46a5-8f57-71465964a7e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/business_logic/models/Post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/business_logic/models/Post.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/business_logic/providers/user_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/business_logic/providers/user_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main_header.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/menu.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/pages/login_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/login_form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/pages/posts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/posts.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/widgets/add_book.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="emulator" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -54,9 +47,43 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="201" y="58" key="SettingsEditor" timestamp="1617606383882">
-      <screen x="0" y="25" width="1440" height="805" />
+    <state x="100" y="185" width="877" height="447" key="AVDManager" timestamp="1618394937254">
+      <screen x="0" y="25" width="1440" height="815" />
+    </state>
+    <state x="100" y="185" width="877" height="447" key="AVDManager/0.25.1440.814@0.25.1440.814" timestamp="1618394876204" />
+    <state x="100" y="185" width="877" height="447" key="AVDManager/0.25.1440.815@0.25.1440.815" timestamp="1618394937254" />
+    <state width="1035" height="356" key="GridCell.Tab.0.bottom" timestamp="1618394622291">
+      <screen x="0" y="25" width="1440" height="815" />
+    </state>
+    <state width="1035" height="137" key="GridCell.Tab.0.bottom/0.25.1440.809@0.25.1440.809" timestamp="1618394331180" />
+    <state width="1035" height="137" key="GridCell.Tab.0.bottom/0.25.1440.813@0.25.1440.813" timestamp="1618394308590" />
+    <state width="1035" height="356" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1618394539682" />
+    <state width="1035" height="356" key="GridCell.Tab.0.bottom/0.25.1440.815@0.25.1440.815" timestamp="1618394622291" />
+    <state width="1035" height="356" key="GridCell.Tab.0.center" timestamp="1618394622290">
+      <screen x="0" y="25" width="1440" height="815" />
+    </state>
+    <state width="1035" height="137" key="GridCell.Tab.0.center/0.25.1440.809@0.25.1440.809" timestamp="1618394331180" />
+    <state width="1035" height="137" key="GridCell.Tab.0.center/0.25.1440.813@0.25.1440.813" timestamp="1618394308589" />
+    <state width="1035" height="356" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1618394539681" />
+    <state width="1035" height="356" key="GridCell.Tab.0.center/0.25.1440.815@0.25.1440.815" timestamp="1618394622290" />
+    <state width="1035" height="356" key="GridCell.Tab.0.left" timestamp="1618394622290">
+      <screen x="0" y="25" width="1440" height="815" />
+    </state>
+    <state width="1035" height="137" key="GridCell.Tab.0.left/0.25.1440.809@0.25.1440.809" timestamp="1618394331180" />
+    <state width="1035" height="137" key="GridCell.Tab.0.left/0.25.1440.813@0.25.1440.813" timestamp="1618394308589" />
+    <state width="1035" height="356" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1618394539681" />
+    <state width="1035" height="356" key="GridCell.Tab.0.left/0.25.1440.815@0.25.1440.815" timestamp="1618394622290" />
+    <state width="1035" height="356" key="GridCell.Tab.0.right" timestamp="1618394622290">
+      <screen x="0" y="25" width="1440" height="815" />
+    </state>
+    <state width="1035" height="137" key="GridCell.Tab.0.right/0.25.1440.809@0.25.1440.809" timestamp="1618394331180" />
+    <state width="1035" height="137" key="GridCell.Tab.0.right/0.25.1440.813@0.25.1440.813" timestamp="1618394308590" />
+    <state width="1035" height="356" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1618394539681" />
+    <state width="1035" height="356" key="GridCell.Tab.0.right/0.25.1440.815@0.25.1440.815" timestamp="1618394622290" />
+    <state x="201" y="58" key="SettingsEditor" timestamp="1618394874141">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="201" y="58" key="SettingsEditor/0.25.1440.805@0.25.1440.805" timestamp="1617606383882" />
+    <state x="201" y="58" key="SettingsEditor/0.25.1440.814@0.25.1440.814" timestamp="1618394874141" />
   </component>
 </project>

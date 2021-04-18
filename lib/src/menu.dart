@@ -53,19 +53,8 @@ class Menu extends StatelessWidget {
               )
             },
           ),
-          if (isUserAuth)
-            (ListTile(
-              leading: Icon(Icons.logout, size: 18),
-              title: Text('Logout'),
-              onTap: () => {
-                Provider.of<UserProvider>(
-                  context,
-                  listen: false,
-                ).setUserData(null)
-              },
-            )),
           ListTile(
-            leading: Icon(Icons.star),
+            leading: Icon(Icons.comment),
             title: Text('Posts'),
             onTap: () => {
               Navigator.pushNamed(
@@ -85,6 +74,17 @@ class Menu extends StatelessWidget {
                 )
               },
             ),
+          if (isUserAuth)
+            (ListTile(
+              leading: Icon(Icons.logout, size: 18),
+              title: Text('Logout'),
+              onTap: () => {
+                Provider.of<UserProvider>(
+                  context,
+                  listen: false,
+                ).setUserData(null)
+              },
+            )),
         ],
       ),
     );

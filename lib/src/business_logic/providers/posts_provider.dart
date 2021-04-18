@@ -9,6 +9,7 @@ class PostsProvider with ChangeNotifier {
   HttpService apiService = new HttpService();
 
   List<Post> _posts = [];
+  List<Post> _userAddedPosts = [];
 
   // double _counter = 1;
   // double get counter => _counter;
@@ -21,24 +22,30 @@ class PostsProvider with ChangeNotifier {
 
   List<Post> get getPosts {
     print('_____PostsProvider getPosts()');
-    return _posts;
+    return [..._posts, ..._userAddedPosts];
+  }
+
+  List<Post> get getUserAddedPosts {
+    print('_____PostsProvider getUserAddedPosts()');
+    return _userAddedPosts;
   }
 
   Future<void> addNewPost(post) async {
-    _posts.add(post);
-    notifyListeners();
-    //return Future<void>.value();
+    if (_userAddedPosts.length < 5) {
+      _userAddedPosts.add(post);
+      notifyListeners();
+    }
   }
 
   Future<void> fetchAndsetPosts() async {
     print('_____PostsProvider fetchAndsetPosts()');
-    if (_posts.length > 0) {
-      return _posts;
-    } else {
-      return apiService.fetchPosts().then((response) {
-        _posts = response;
-        notifyListeners();
-      });
-    }
+    // if (_posts.length > 0) {
+    //   return _posts;
+    // } else {
+    return apiService.fetchPosts().then((response) {
+      _posts = response;
+      notifyListeners();
+    });
+    // }
   }
 }
