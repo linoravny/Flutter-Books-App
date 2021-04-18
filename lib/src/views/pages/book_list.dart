@@ -6,16 +6,40 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 import 'package:flutter/material.dart';
 
-class BookList extends StatelessWidget {
+class BookList extends StatefulWidget {
   final String category;
   BookList(this.category);
 
   @override
-  Widget build(BuildContext context) {
-    List<Book> filterBook = DUMMY_BOOKS.where((item) {
-      return item.category == category;
+  _BookListState createState() => _BookListState();
+}
+
+class _BookListState extends State<BookList> {
+  String sortDirection = 'ascending';
+  List<Book> filterBook = [];
+
+  @override
+  void initState() {
+    print('book list initState()');
+    filterBook = DUMMY_BOOKS.where((item) {
+      return (widget.category == 'All')
+          ? true
+          : item.category == widget.category;
     }).toList();
-    print('list filter length: ' + filterBook.length.toString());
+    sortList();
+    super.initState();
+  }
+
+  void sortList() {
+    if (sortDirection == 'ascending')
+      filterBook.sort((a, b) => a.author.compareTo(b.author));
+    else
+      filterBook.sort((b, a) => a.author.compareTo(b.author));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print(filterBook[0].author);
     final pageHeader = AppBar(
       leading: IconButton(
         icon: Icon(Icons.arrow_back),
@@ -30,16 +54,24 @@ class BookList extends StatelessWidget {
       title: Text('books List'),
       actions: <Widget>[
         IconButton(
-          icon: const Icon(Icons.search),
-          tooltip: 'search by title',
-          onPressed: () {},
+          icon: const Icon(Icons.sort_by_alpha),
+          tooltip: 'sort by title',
+          onPressed: () {
+            if (sortDirection == 'ascending')
+              sortDirection = 'descending';
+            else
+              sortDirection = 'ascending';
+            setState(() {
+              sortList();
+            });
+          },
         ),
       ],
     );
 
-    final pageBody = Container(
+    var pageBody = Container(
       child: Center(
-        child: ListView.builder(
+        child: new ListView.builder(
           padding: const EdgeInsets.all(8),
           itemCount: filterBook.length,
           itemBuilder: (BuildContext context, int index) {
@@ -54,8 +86,8 @@ class BookList extends StatelessWidget {
                         color: Colors.pink,
                       ),
                       title: Text(
-                          'Book Title: ${DUMMY_BOOKS[index].title}, Category: ${DUMMY_BOOKS[index].category}'),
-                      subtitle: Text(DUMMY_BOOKS[index].author),
+                          'Book Title: ${filterBook[index].title}, Category: ${DUMMY_BOOKS[index].category}'),
+                      subtitle: Text(filterBook[index].author),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -68,32 +100,16 @@ class BookList extends StatelessWidget {
                               builder: (context) => SingleChildScrollView(
                                 controller: ModalScrollController.of(context),
                                 child: BookItem(
-                                  itemDataObject: DUMMY_BOOKS[index],
+                                  itemDataObject: filterBook[index],
                                 ),
                               ),
                             );
-                            // showDialog<void>(
-                            //   context: context,
-                            //   barrierDismissible: false,
-                            //   builder: (_) => BookItem(
-                            //       itemDataObject: DUMMY_BOOKS[index]),
-                            // );
-
-                            // Navigator.of(context).push(
-                            //   new MaterialPageRoute<Null>(
-                            //       builder: (BuildContext context) {
-                            //         return new BookItem();
-                            //       },
-                            //       fullscreenDialog: true),
-                            // );
                           },
                         ),
                         const SizedBox(width: 8),
                       ],
                     ),
                   ],
-
-                  //Text('Book Title: ${DUMMY_BOOKS[index].title}'),
                 ),
               ),
             );

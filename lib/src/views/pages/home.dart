@@ -95,7 +95,12 @@ class _HomeState extends State<Home> {
                     Dismissible(
                       key: Key(item.appId),
                       onDismissed: (direction) {
-                        context.read<PostsProvider>().deleteUserAddedPost(item);
+                        // Remove the item from the data source.
+                        setState(() {
+                          context
+                              .read<PostsProvider>()
+                              .deleteUserAddedPost(item);
+                        });
 
                         // Show a snackbar. This snackbar could also contain "Undo" actions.
                         ScaffoldMessenger.of(context).showSnackBar(

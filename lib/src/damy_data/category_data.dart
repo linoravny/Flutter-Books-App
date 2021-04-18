@@ -4,6 +4,11 @@ import '../business_logic/models/category.dart';
 
 const DUMMY_CATEGORIES = const [
   Category(
+    id: 'c0',
+    title: 'All',
+    color: Colors.grey,
+  ),
+  Category(
     id: 'c1',
     title: 'Fiction',
     color: Colors.purple,
