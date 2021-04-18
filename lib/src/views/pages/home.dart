@@ -78,6 +78,50 @@ class _HomeState extends State<Home> {
             ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.all(15),
+          child: Text('Added Post List:'),
+        ),
+        if (postAddedCount > 0)
+          Expanded(
+            child: ListView.builder(
+              scrollDirection: Axis.vertical,
+              itemCount: userAddedPostData.length,
+              itemBuilder: (context, index) {
+                final item = userAddedPostData[index];
+
+                return Column(
+                  children: [
+                    Dismissible(
+                      key: Key(item.appId),
+                      onDismissed: (direction) {
+                        context.read<PostsProvider>().deleteUserAddedPost(item);
+
+                        // Show a snackbar. This snackbar could also contain "Undo" actions.
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text("$item dismissed")));
+                      },
+                      // Show a red background as the item is swiped away.
+                      background: Container(
+                        color: Colors.red,
+                      ),
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: const Icon(Icons.comment),
+                            title: Text(item.title),
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
         if (postAddedCount < 5)
           Expanded(
             child: Align(

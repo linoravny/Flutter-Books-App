@@ -3,6 +3,7 @@ import 'package:books_app/src/business_logic/providers/posts_provider.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:uuid/uuid.dart';
 
 class AddPost extends StatefulWidget {
   @override
@@ -13,6 +14,7 @@ class _AddPostState extends State<AddPost> {
   final _formKey = GlobalKey<FormState>();
   final _titleProvider = FocusNode();
   Post _post;
+  var uuid = Uuid();
 
   @override
   void dispose() {
@@ -93,6 +95,7 @@ class _AddPostState extends State<AddPost> {
                         },
                         onSaved: (value) {
                           _post = Post(
+                            appId: uuid.v1(),
                             title: value,
                           );
                         },

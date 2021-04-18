@@ -11,23 +11,24 @@ class PostsProvider with ChangeNotifier {
   List<Post> _posts = [];
   List<Post> _userAddedPosts = [];
 
-  // double _counter = 1;
-  // double get counter => _counter;
-  // void setCounter(double newValue) {
-  //   if (newValue != _counter) {
-  //     _counter = newValue;
-  //     notifyListeners();
-  //   }
-  // }
-
   List<Post> get getPosts {
     print('_____PostsProvider getPosts()');
-    return [..._posts, ..._userAddedPosts];
+    List<Post> newList = [..._posts, ..._userAddedPosts];
+    Comparator<Post> titleComparator = (a, b) => a.title.compareTo(b.title);
+    newList.sort(titleComparator);
+
+    return newList;
   }
 
   List<Post> get getUserAddedPosts {
     print('_____PostsProvider getUserAddedPosts()');
     return _userAddedPosts;
+  }
+
+  Future<void> deleteUserAddedPost(postToRemove) async {
+    print('_____PostsProvider deleteUserAddedPost()');
+    _userAddedPosts.removeWhere((item) => item.appId == postToRemove.appId);
+    notifyListeners();
   }
 
   Future<void> addNewPost(post) async {

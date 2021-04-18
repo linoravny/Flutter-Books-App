@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:books_app/src/business_logic/models/post.dart';
 import 'package:http/http.dart' as http;
+import 'package:uuid/uuid.dart';
 
 class HttpService {
   final String postsURL = "https://jsonplaceholder.typicode.com/posts";
@@ -13,12 +14,15 @@ class HttpService {
   Future<List<Post>> fetchPosts() async {
     try {
       final response = await http.get(Uri.parse(postsURL));
+      var uuid = Uuid();
 
       if (response.statusCode == 200) {
-        final extractedData = json.decode(response.body) as List<dynamic>;
+        var extractedData = json.decode(response.body) as List<dynamic>;
 
         final List<Post> listToReturn = [];
+
         extractedData.forEach((post) {
+          post["appId"] = uuid.v1();
           listToReturn.add(Post.fromJson(post));
         });
 
