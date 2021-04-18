@@ -18,6 +18,21 @@ class MainHeader extends StatefulWidget implements PreferredSizeWidget {
 
 class _MainHeaderState extends State<MainHeader> {
   PickedFile imageFile;
+
+  @override
+  initState() {
+    print('_MainHeaderState initState()');
+
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    print('_MainHeaderState didChangeDependencies()');
+
+    super.didChangeDependencies();
+  }
+
   Future<PickedFile> _getImage(int type) async {
     PickedFile pickedImage = await ImagePicker().getImage(
         source: type == 1 ? ImageSource.camera : ImageSource.gallery,
@@ -28,10 +43,15 @@ class _MainHeaderState extends State<MainHeader> {
   @override
   Widget build(BuildContext context) {
     //listener to provider
+
     final userData = Provider.of<UserProvider>(
       context,
     ).userData;
+
     final isUserAuth = (userData != null) ? userData.isAuth : false;
+    imageFile = Provider.of<UserProvider>(
+      context,
+    ).getAvatar;
 
     return AppBar(
       leading: (isUserAuth)
@@ -40,6 +60,7 @@ class _MainHeaderState extends State<MainHeader> {
               tooltip: 'Open Device Camera',
               onPressed: () async {
                 final tmpFile = await _getImage(2);
+                context.read<UserProvider>().setUserAvatar(tmpFile);
 
                 setState(() {
                   imageFile = tmpFile;

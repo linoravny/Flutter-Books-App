@@ -20,6 +20,7 @@ class _LoginFormState extends State<LoginForm> {
     phone: null,
     name: '',
     isAuth: false,
+    avatar: null,
   );
 
   final _emailProvider = FocusNode();
@@ -102,7 +103,9 @@ class _LoginFormState extends State<LoginForm> {
               ' phone: ' +
               _user.phone.toString() +
               ' isAuth:' +
-              _user.isAuth.toString(),
+              _user.isAuth.toString() +
+              ' avatar:' +
+              _user.avatar.toString(),
         );
 
         ScaffoldMessenger.of(context).removeCurrentSnackBar();
@@ -145,6 +148,7 @@ class _LoginFormState extends State<LoginForm> {
                   phone: int.parse(value),
                   name: _user.name,
                   isAuth: _user.isAuth,
+                  avatar: _user.avatar,
                 );
               },
             ),
@@ -175,6 +179,7 @@ class _LoginFormState extends State<LoginForm> {
                   phone: _user.phone,
                   name: _user.name,
                   isAuth: _user.isAuth,
+                  avatar: _user.avatar,
                 );
               },
             ),
@@ -190,7 +195,7 @@ class _LoginFormState extends State<LoginForm> {
                 labelStyle: TextStyle(color: Colors.grey),
               ),
               textInputAction: TextInputAction.done,
-              keyboardType: TextInputType.text,
+              keyboardType: TextInputType.visiblePassword,
               focusNode: _passwordProvider,
               validator: _validatePassword,
               onFieldSubmitted: (_) {
@@ -204,6 +209,7 @@ class _LoginFormState extends State<LoginForm> {
                   phone: _user.phone,
                   name: _user.name,
                   isAuth: _user.isAuth,
+                  avatar: _user.avatar,
                 );
               },
             ),

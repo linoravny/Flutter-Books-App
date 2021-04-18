@@ -1,3 +1,5 @@
+import 'package:image_picker/image_picker.dart';
+
 class User {
   final int id;
   final String password;
@@ -5,6 +7,7 @@ class User {
   final int phone;
   final String name;
   bool isAuth;
+  PickedFile avatar;
 
   User({
     this.id,
@@ -13,5 +16,6 @@ class User {
     this.phone,
     this.name,
     this.isAuth,
+    this.avatar,
   });
 }
