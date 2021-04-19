@@ -20,12 +20,12 @@ class Menu extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           DrawerHeader(
-            child: Text("app menu"),
+            child: const Text("app menu"),
           ),
           if (!isUserAuth)
             (ListTile(
-              leading: Icon(Icons.login, size: 18),
-              title: Text('Login'),
+              leading: const Icon(Icons.login, size: 18),
+              title: const Text('Login'),
               onTap: () => {
                 Navigator.pushNamed(
                   context,
@@ -34,8 +34,8 @@ class Menu extends StatelessWidget {
               },
             )),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Home'),
+            leading: const Icon(Icons.home),
+            title: const Text('Home'),
             onTap: () => {
               Navigator.pushNamed(
                 context,
@@ -44,8 +44,8 @@ class Menu extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.book),
-            title: Text('Books Categories'),
+            leading: const Icon(Icons.book),
+            title: const Text('Books Categories'),
             onTap: () => {
               Navigator.pushNamed(
                 context,
@@ -54,8 +54,8 @@ class Menu extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.comment),
-            title: Text('Posts'),
+            leading: const Icon(Icons.comment),
+            title: const Text('Posts'),
             onTap: () => {
               Navigator.pushNamed(
                 context,
@@ -65,8 +65,8 @@ class Menu extends StatelessWidget {
           ),
           if (isUserAuth)
             ListTile(
-              leading: Icon(Icons.star),
-              title: Text('My favorit books'),
+              leading: const Icon(Icons.star),
+              title: const Text('My favorit books'),
               onTap: () => {
                 Navigator.pushNamed(
                   context,
@@ -76,8 +76,8 @@ class Menu extends StatelessWidget {
             ),
           if (isUserAuth)
             (ListTile(
-              leading: Icon(Icons.logout, size: 18),
-              title: Text('Logout'),
+              leading: const Icon(Icons.logout, size: 18),
+              title: const Text('Logout'),
               onTap: () => {
                 Provider.of<UserProvider>(
                   context,

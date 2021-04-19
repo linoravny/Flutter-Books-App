@@ -84,7 +84,7 @@ class _LoginFormState extends State<LoginForm> {
     void saveForm() {
       if (_formKey.currentState.validate()) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Processing Data'),
+          content: const Text('Processing Data'),
         ));
 
         _formKey.currentState.save();
@@ -130,7 +130,7 @@ class _LoginFormState extends State<LoginForm> {
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'phone number',
-                prefixIcon: Icon(Icons.phone),
+                prefixIcon: const Icon(Icons.phone),
                 border: OutlineInputBorder(),
                 labelStyle: TextStyle(color: Colors.grey),
               ),
@@ -160,7 +160,7 @@ class _LoginFormState extends State<LoginForm> {
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'email',
-                prefixIcon: Icon(Icons.email),
+                prefixIcon: const Icon(Icons.email),
                 border: OutlineInputBorder(),
                 labelStyle: TextStyle(color: Colors.grey),
               ),
@@ -190,7 +190,7 @@ class _LoginFormState extends State<LoginForm> {
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'password',
-                prefixIcon: Icon(Icons.emoji_emotions_rounded),
+                prefixIcon: const Icon(Icons.emoji_emotions_rounded),
                 border: OutlineInputBorder(),
                 labelStyle: TextStyle(color: Colors.grey),
               ),
@@ -220,7 +220,7 @@ class _LoginFormState extends State<LoginForm> {
               onPressed: () {
                 saveForm();
               },
-              child: Text('submit'),
+              child: const Text('submit'),
             )
           ],
         ),

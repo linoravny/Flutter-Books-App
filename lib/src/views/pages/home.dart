@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
       children: [
         Padding(
           padding: const EdgeInsets.all(15),
-          child: Text('You Can Add only 5 posts'),
+          child: const Text('You Can Add only 5 posts'),
         ),
         Center(
           child: Container(
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text('$postAddedCount/5'),
-                          Text('hello, user'),
+                          const Text('hello, user'),
                         ],
                       ),
                     ],
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
         ),
         Padding(
           padding: const EdgeInsets.all(15),
-          child: Text('Added Post List:'),
+          child: const Text('Added Post List:'),
         ),
         if (postAddedCount > 0)
           Expanded(
@@ -145,7 +145,7 @@ class _HomeState extends State<Home> {
                         setState(() {}),
                       });
                 },
-                child: Icon(Icons.add),
+                child: const Icon(Icons.add),
                 tooltip: 'Add Post',
               ),
             ),

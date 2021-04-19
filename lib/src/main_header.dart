@@ -56,7 +56,7 @@ class _MainHeaderState extends State<MainHeader> {
     return AppBar(
       leading: (isUserAuth)
           ? IconButton(
-              icon: Icon(Icons.camera_alt_sharp),
+              icon: const Icon(Icons.camera_alt_sharp),
               tooltip: 'Open Device Camera',
               onPressed: () async {
                 final tmpFile = await _getImage(2);
@@ -86,12 +86,9 @@ class _MainHeaderState extends State<MainHeader> {
                     : FileImage(File(imageFile.path)),
               ),
             ),
-          Text('Books App'),
+          const Text('Books App'),
         ],
       ),
-
-      // actions: <Widget>[
-      // ],
     );
   }
 }

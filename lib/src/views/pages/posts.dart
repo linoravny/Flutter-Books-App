@@ -66,7 +66,7 @@ class _PostPageState extends State<PostPage> {
     final pageHeader = AppBar(
       leading: (postAddedCount < 5)
           ? IconButton(
-              icon: Icon(Icons.add),
+              icon: const Icon(Icons.add),
               tooltip: 'add post',
               onPressed: () {
                 showDialog<void>(
@@ -84,7 +84,7 @@ class _PostPageState extends State<PostPage> {
       iconTheme: IconThemeData(
         color: Colors.white, //change your color here
       ),
-      title: Text('Posts'),
+      title: const Text('Posts'),
     );
 
     final pageBody = Container(

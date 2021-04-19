@@ -42,16 +42,16 @@ class _BookListState extends State<BookList> {
     print(filterBook[0].author);
     final pageHeader = AppBar(
       leading: IconButton(
-        icon: Icon(Icons.arrow_back),
+        icon: const Icon(Icons.arrow_back),
         tooltip: 'back button',
         onPressed: () {
           Navigator.pop(context);
         },
       ),
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: Colors.white, //change your color here
       ),
-      title: Text('books List'),
+      title: const Text('books List'),
       actions: <Widget>[
         IconButton(
           icon: const Icon(Icons.sort_by_alpha),
@@ -81,7 +81,7 @@ class _BookListState extends State<BookList> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     ListTile(
-                      leading: Icon(
+                      leading: const Icon(
                         Icons.book_online_outlined,
                         color: Colors.pink,
                       ),

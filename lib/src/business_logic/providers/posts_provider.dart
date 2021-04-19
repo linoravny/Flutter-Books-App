@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class PostsProvider with ChangeNotifier {
-  //with is mixin.
+  //with is mixin - listener not with same logic (as class)
   HttpService apiService = new HttpService();
 
   List<Post> _posts = [];
@@ -40,13 +40,9 @@ class PostsProvider with ChangeNotifier {
 
   Future<void> fetchAndsetPosts() async {
     print('_____PostsProvider fetchAndsetPosts()');
-    // if (_posts.length > 0) {
-    //   return _posts;
-    // } else {
     return apiService.fetchPosts().then((response) {
       _posts = response;
       notifyListeners();
     });
-    // }
   }
 }

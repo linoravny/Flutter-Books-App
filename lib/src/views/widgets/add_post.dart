@@ -39,7 +39,7 @@ class _AddPostState extends State<AddPost> {
               (res) => {
                 ScaffoldMessenger.of(context).hideCurrentSnackBar(),
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('Added successfuly :) '),
+                  content: const Text('Added successfuly :) '),
                 )),
                 Navigator.of(context).pop()
               },
@@ -53,19 +53,19 @@ class _AddPostState extends State<AddPost> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
       ),
-      contentPadding: EdgeInsets.all(0),
+      contentPadding: const EdgeInsets.all(0),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             child: InkResponse(
               onTap: () {
                 Navigator.pop(context, true);
               },
               child: CircleAvatar(
-                child: Icon(Icons.close),
+                child: const Icon(Icons.close),
                 backgroundColor: Colors.red,
               ),
             ),
@@ -78,7 +78,7 @@ class _AddPostState extends State<AddPost> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Text('Add Post'),
+                    const Text('Add Post'),
                     Padding(
                       padding: EdgeInsets.all(8.0),
                       child: TextFormField(
@@ -104,7 +104,7 @@ class _AddPostState extends State<AddPost> {
                     Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: ElevatedButton(
-                        child: Text("Add"),
+                        child: const Text("Add"),
                         onPressed: () {
                           saveForm();
                         },

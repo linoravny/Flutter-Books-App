@@ -16,24 +16,14 @@ class BookItem extends StatelessWidget {
         defUrl,
         forceWebView: true,
       );
-      //throw 'Could not launch $url';
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // actions: [
-      //   IconButton(
-      //     onPressed: () => Navigator.pop(context, true),
-      //     icon: Icon(Icons.close),
-      //     tooltip: 'close book item popup',
-      //   ),
-      // ],
-      // title:
       color: Colors.deepOrange[50],
-      padding: EdgeInsets.all(25),
-      //alignment: Alignment(0, 0),
+      padding: const EdgeInsets.all(25),
       height: 200,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
