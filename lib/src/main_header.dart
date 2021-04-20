@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:books_app/src/business_logic/providers/user_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
@@ -43,6 +44,8 @@ class _MainHeaderState extends State<MainHeader> {
   @override
   Widget build(BuildContext context) {
     //listener to provider
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light
+    //     .copyWith(statusBarIconBrightness: Brightness.light));
 
     final userData = Provider.of<UserProvider>(
       context,
@@ -54,6 +57,9 @@ class _MainHeaderState extends State<MainHeader> {
     ).getAvatar;
 
     return AppBar(
+      //systemOverlayStyle: SystemUiOverlayStyle(statusBarColor: Colors.orange),
+      // backgroundColor: Colors.red, // status bar color
+      // brightness: Brightness.light, // status bar brightness
       leading: (isUserAuth)
           ? IconButton(
               icon: const Icon(Icons.camera_alt_sharp),
