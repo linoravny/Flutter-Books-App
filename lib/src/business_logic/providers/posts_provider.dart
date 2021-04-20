@@ -25,7 +25,7 @@ class PostsProvider with ChangeNotifier {
     return _userAddedPosts;
   }
 
-  Future<void> deleteUserAddedPost(postToRemove) async {
+  void deleteUserAddedPost(postToRemove) async {
     print('_____PostsProvider deleteUserAddedPost()');
     _userAddedPosts.removeWhere((item) => item.appId == postToRemove.appId);
     notifyListeners();

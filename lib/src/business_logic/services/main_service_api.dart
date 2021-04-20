@@ -13,10 +13,16 @@ class HttpService {
 
   Future<List<Post>> fetchPosts() async {
     try {
-      final response = await http.get(Uri.parse(postsURL));
+      print('HttpService fetchPosts strat');
+      final response = await http.get(Uri.parse(postsURL)).catchError((err) {
+        print('HttpService fetchPosts erro');
+        print(err);
+      });
+      print('HttpService fetchPosts response');
       var uuid = Uuid();
 
       if (response.statusCode == 200) {
+        print('HttpService fetchPosts statusCode == 200');
         var extractedData = json.decode(response.body) as List<dynamic>;
 
         final List<Post> listToReturn = [];

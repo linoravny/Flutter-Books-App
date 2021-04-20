@@ -2,8 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d984b6b8-5ce1-46a5-8f57-71465964a7e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/splash_icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/splash_icon-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/splash_icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/business_logic/providers/posts_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/business_logic/providers/posts_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/business_logic/services/main_service_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/business_logic/services/main_service_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/views/pages/posts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/pages/posts.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,43 +84,54 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="185" width="877" height="447" key="AVDManager" timestamp="1618394937254">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state x="100" y="185" width="877" height="447" key="AVDManager" timestamp="1618898597131">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state x="100" y="185" width="877" height="447" key="AVDManager/0.25.1440.814@0.25.1440.814" timestamp="1618394876204" />
     <state x="100" y="185" width="877" height="447" key="AVDManager/0.25.1440.815@0.25.1440.815" timestamp="1618394937254" />
-    <state width="1035" height="356" key="GridCell.Tab.0.bottom" timestamp="1618394622291">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state x="100" y="185" width="877" height="447" key="AVDManager/0.25.1440.817@0.25.1440.817" timestamp="1618822872440" />
+    <state x="100" y="185" width="877" height="447" key="AVDManager/0.25.1440.818@0.25.1440.818" timestamp="1618898597131" />
+    <state width="1035" height="194" key="GridCell.Tab.0.bottom" timestamp="1618898596655">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state width="1035" height="137" key="GridCell.Tab.0.bottom/0.25.1440.809@0.25.1440.809" timestamp="1618394331180" />
     <state width="1035" height="137" key="GridCell.Tab.0.bottom/0.25.1440.813@0.25.1440.813" timestamp="1618394308590" />
     <state width="1035" height="356" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1618394539682" />
     <state width="1035" height="356" key="GridCell.Tab.0.bottom/0.25.1440.815@0.25.1440.815" timestamp="1618394622291" />
-    <state width="1035" height="356" key="GridCell.Tab.0.center" timestamp="1618394622290">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state width="1035" height="137" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1618898563845" />
+    <state width="1035" height="194" key="GridCell.Tab.0.bottom/0.25.1440.818@0.25.1440.818" timestamp="1618898596655" />
+    <state width="1035" height="194" key="GridCell.Tab.0.center" timestamp="1618898596655">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state width="1035" height="137" key="GridCell.Tab.0.center/0.25.1440.809@0.25.1440.809" timestamp="1618394331180" />
     <state width="1035" height="137" key="GridCell.Tab.0.center/0.25.1440.813@0.25.1440.813" timestamp="1618394308589" />
     <state width="1035" height="356" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1618394539681" />
     <state width="1035" height="356" key="GridCell.Tab.0.center/0.25.1440.815@0.25.1440.815" timestamp="1618394622290" />
-    <state width="1035" height="356" key="GridCell.Tab.0.left" timestamp="1618394622290">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state width="1035" height="137" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1618898563845" />
+    <state width="1035" height="194" key="GridCell.Tab.0.center/0.25.1440.818@0.25.1440.818" timestamp="1618898596655" />
+    <state width="1035" height="194" key="GridCell.Tab.0.left" timestamp="1618898596654">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state width="1035" height="137" key="GridCell.Tab.0.left/0.25.1440.809@0.25.1440.809" timestamp="1618394331180" />
     <state width="1035" height="137" key="GridCell.Tab.0.left/0.25.1440.813@0.25.1440.813" timestamp="1618394308589" />
     <state width="1035" height="356" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1618394539681" />
     <state width="1035" height="356" key="GridCell.Tab.0.left/0.25.1440.815@0.25.1440.815" timestamp="1618394622290" />
-    <state width="1035" height="356" key="GridCell.Tab.0.right" timestamp="1618394622290">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state width="1035" height="137" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1618898563844" />
+    <state width="1035" height="194" key="GridCell.Tab.0.left/0.25.1440.818@0.25.1440.818" timestamp="1618898596654" />
+    <state width="1035" height="194" key="GridCell.Tab.0.right" timestamp="1618898596655">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state width="1035" height="137" key="GridCell.Tab.0.right/0.25.1440.809@0.25.1440.809" timestamp="1618394331180" />
     <state width="1035" height="137" key="GridCell.Tab.0.right/0.25.1440.813@0.25.1440.813" timestamp="1618394308590" />
     <state width="1035" height="356" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1618394539681" />
     <state width="1035" height="356" key="GridCell.Tab.0.right/0.25.1440.815@0.25.1440.815" timestamp="1618394622290" />
-    <state x="201" y="58" key="SettingsEditor" timestamp="1618394874141">
-      <screen x="0" y="25" width="1440" height="814" />
+    <state width="1035" height="137" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1618898563845" />
+    <state width="1035" height="194" key="GridCell.Tab.0.right/0.25.1440.818@0.25.1440.818" timestamp="1618898596655" />
+    <state x="201" y="58" key="SettingsEditor" timestamp="1618822853175">
+      <screen x="0" y="25" width="1440" height="815" />
     </state>
     <state x="201" y="58" key="SettingsEditor/0.25.1440.805@0.25.1440.805" timestamp="1617606383882" />
     <state x="201" y="58" key="SettingsEditor/0.25.1440.814@0.25.1440.814" timestamp="1618394874141" />
+    <state x="201" y="58" key="SettingsEditor/0.25.1440.815@0.25.1440.815" timestamp="1618822853175" />
   </component>
 </project>

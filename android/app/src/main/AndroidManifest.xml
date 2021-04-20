@@ -1,8 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.books_app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="books_app"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -25,7 +30,7 @@
                  Flutter's first frame. -->
             <meta-data
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
-              android:resource="@drawable/launch_background"
+              android:resource="@drawable/splash_icon"
               />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -38,7 +43,7 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
-        <uses-permission android:name="android.permission.INTERNET"/>
-    
+        
     </application>
+    
 </manifest>

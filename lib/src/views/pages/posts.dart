@@ -35,13 +35,21 @@ class _PostPageState extends State<PostPage> {
       _isLoading = true;
     });
 
-    context.read<PostsProvider>().fetchAndsetPosts().then(
+    context
+        .read<PostsProvider>()
+        .fetchAndsetPosts()
+        .then(
           (_) => {
+            print('fetchAndsetPosts then'),
             setState(() {
+              print('fetchAndsetPosts then _isLoading = false');
               _isLoading = false;
             }),
           },
-        );
+        )
+        .catchError((onError) => {
+              print('fetchAndsetPosts onError'),
+            });
 
     super.didChangeDependencies();
   }
@@ -96,7 +104,7 @@ class _PostPageState extends State<PostPage> {
                 return Column(
                   children: [
                     ListTile(
-                      leading: const Icon(Icons.comment),
+                      leading: Icon(Icons.comment),
                       title: Text("$index / " + postData.length.toString()),
                       subtitle: Text(postData[index].title),
                       contentPadding: EdgeInsets.symmetric(
