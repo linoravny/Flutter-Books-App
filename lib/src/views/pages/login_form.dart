@@ -1,6 +1,7 @@
 import 'package:books_app/src/business_logic/models/user.dart';
 import 'package:books_app/src/business_logic/providers/user_provider.dart';
 import 'package:books_app/src/main-shell.dart';
+import 'package:books_app/src/views/shared/inputs.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -25,6 +26,23 @@ class _LoginFormState extends State<LoginForm> {
 
   final _emailProvider = FocusNode();
   final _passwordProvider = FocusNode();
+  final SharedInputs sharedInputs = new SharedInputs();
+
+  InputDecoration textInputDecoration({
+    String labelText,
+    IconData prefixIcon,
+  }) {
+    return InputDecoration(
+      labelText: labelText != null ? labelText : '',
+      prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
+      border: const OutlineInputBorder(
+        borderRadius: const BorderRadius.all(
+          const Radius.circular(10.0),
+        ),
+      ),
+      //labelStyle: TextStyle(color: Colors.grey),
+    );
+  }
 
   @override
   void dispose() {
@@ -128,11 +146,10 @@ class _LoginFormState extends State<LoginForm> {
           children: [
             //phone
             TextFormField(
-              decoration: InputDecoration(
+              decoration: sharedInputs.sharedInputDecoration(
                 labelText: 'phone number',
-                prefixIcon: const Icon(Icons.phone),
-                border: OutlineInputBorder(),
-                labelStyle: TextStyle(color: Colors.grey),
+                prefixIcon: Icons.phone,
+                hasOutLineBorder: false,
               ),
               textInputAction: TextInputAction.next,
               keyboardType: TextInputType.number,
@@ -158,11 +175,9 @@ class _LoginFormState extends State<LoginForm> {
             ),
             //Email
             TextFormField(
-              decoration: InputDecoration(
+              decoration: sharedInputs.sharedInputDecoration(
                 labelText: 'email',
-                prefixIcon: const Icon(Icons.email),
-                border: OutlineInputBorder(),
-                labelStyle: TextStyle(color: Colors.grey),
+                prefixIcon: Icons.email,
               ),
               textInputAction: TextInputAction.next,
               keyboardType: TextInputType.emailAddress,
@@ -189,11 +204,9 @@ class _LoginFormState extends State<LoginForm> {
             //Passsword
             TextFormField(
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: sharedInputs.sharedInputDecoration(
                 labelText: 'password',
-                prefixIcon: const Icon(Icons.emoji_emotions_rounded),
-                border: OutlineInputBorder(),
-                labelStyle: TextStyle(color: Colors.grey),
+                prefixIcon: Icons.lock,
               ),
               textInputAction: TextInputAction.done,
               keyboardType: TextInputType.visiblePassword,
@@ -227,6 +240,7 @@ class _LoginFormState extends State<LoginForm> {
         ),
       ),
     );
+
     return AppMainShell(widget: pageBody);
   }
 }
