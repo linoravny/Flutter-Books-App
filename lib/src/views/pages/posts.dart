@@ -23,12 +23,6 @@ class _PostPageState extends State<PostPage> {
   HttpService apiService = new HttpService();
 
   @override
-  initState() {
-    print('_______PostPage initState()');
-    super.initState();
-  }
-
-  @override
   void didChangeDependencies() {
     // befor build run
     setState(() {

@@ -48,9 +48,6 @@ class _BookListState extends State<BookList> {
           Navigator.pop(context);
         },
       ),
-      iconTheme: const IconThemeData(
-        color: Colors.white, //change your color here
-      ),
       title: const Text('books List'),
       actions: <Widget>[
         IconButton(
@@ -83,7 +80,6 @@ class _BookListState extends State<BookList> {
                     ListTile(
                       leading: const Icon(
                         Icons.book_online_outlined,
-                        color: Colors.pink,
                       ),
                       title: Text(
                           'Book Title: ${filterBook[index].title}, Category: ${DUMMY_BOOKS[index].category}'),

@@ -188,6 +188,7 @@ class _LoginFormState extends State<LoginForm> {
             ),
             //Passsword
             TextFormField(
+              obscureText: true,
               decoration: InputDecoration(
                 labelText: 'password',
                 prefixIcon: const Icon(Icons.emoji_emotions_rounded),

@@ -23,7 +23,7 @@ class BookItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.deepOrange[50],
+      //color: Colors.deepOrange[50],
       padding: const EdgeInsets.all(25),
       height: 200,
       child: Column(
@@ -38,7 +38,7 @@ class BookItem extends StatelessWidget {
                 itemDataObject.link,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.deepOrange[300],
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
               onTap: () {

@@ -66,7 +66,6 @@ class _AddPostState extends State<AddPost> {
               },
               child: CircleAvatar(
                 child: const Icon(Icons.close),
-                backgroundColor: Colors.red,
               ),
             ),
           ),
@@ -86,7 +85,7 @@ class _AddPostState extends State<AddPost> {
                           labelText: 'post title',
                           prefixIcon: Icon(Icons.title),
                           border: OutlineInputBorder(),
-                          labelStyle: TextStyle(color: Colors.grey),
+                          //labelStyle: TextStyle(color: Colors.grey),
                         ),
                         textInputAction: TextInputAction.done,
                         keyboardType: TextInputType.text,

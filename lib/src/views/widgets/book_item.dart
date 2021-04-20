@@ -22,7 +22,7 @@ class BookItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.deepOrange[50],
+      //color: Colors.deepOrange[50],
       padding: const EdgeInsets.all(25),
       height: 200,
       child: Column(
@@ -36,16 +36,15 @@ class BookItem extends StatelessWidget {
               child: new Text(
                 itemDataObject.link,
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.deepOrange[300],
-                ),
+                    //fontWeight: FontWeight.bold,
+                    //color: Colors.deepOrange[300],
+                    ),
               ),
               onTap: () {
                 _launchURL(itemDataObject.link);
               }),
         ],
       ),
-      //contentPadding: EdgeInsets.zero,
     );
   }
 }
