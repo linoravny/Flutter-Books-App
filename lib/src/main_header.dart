@@ -20,20 +20,6 @@ class MainHeader extends StatefulWidget implements PreferredSizeWidget {
 class _MainHeaderState extends State<MainHeader> {
   PickedFile imageFile;
 
-  @override
-  initState() {
-    print('_MainHeaderState initState()');
-
-    super.initState();
-  }
-
-  @override
-  void didChangeDependencies() {
-    print('_MainHeaderState didChangeDependencies()');
-
-    super.didChangeDependencies();
-  }
-
   Future<PickedFile> _getImage(int type) async {
     PickedFile pickedImage = await ImagePicker().getImage(
         source: type == 1 ? ImageSource.camera : ImageSource.gallery,
