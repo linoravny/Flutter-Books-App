@@ -30,8 +30,10 @@ class Main extends StatelessWidget {
       child: MaterialApp(
         title: 'Books App',
         theme: appTheme(),
-        home: Home(),
+        //home: Home(),
+        initialRoute: '/',
         routes: {
+          '/': (context) => Home(),
           LoginForm.routeName: (context) => LoginForm(),
           Home.routeName: (context) => Home(),
           BookCategories.routeName: (context) => BookCategories(),
@@ -41,6 +43,17 @@ class Main extends StatelessWidget {
           // '/home': (context) => Home(),
           // '/login': (context) => LoginForm(),
           // '/book-categories': (context) => BookCategories(),
+        },
+
+        //when no route define in routes object
+        // onGenerateRoute: (settings) {
+        //   print(settings.arguments);
+        //   return MaterialPageRoute(builder: (_) => LoginForm());
+        // },
+
+        // when cant build the widget that we route.
+        onUnknownRoute: (_) {
+          return MaterialPageRoute(builder: (_) => LoginForm());
         },
       ),
     );

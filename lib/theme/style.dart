@@ -9,16 +9,16 @@ ThemeData appTheme() {
   return ThemeData(
     fontFamily: 'QuickSand',
     primarySwatch: mColorOrange,
-    textTheme: ThemeData.light().textTheme.copyWith(
-        bodyText1: TextStyle(
-          color: Color.fromRGBO(20, 51, 51, 1),
-        ),
-        bodyText2: TextStyle(
-          color: Color.fromRGBO(20, 51, 51, 1),
-        ),
-        headline6: TextStyle(
-          fontSize: 20,
-        )),
+    // textTheme: ThemeData.light().textTheme.copyWith(
+    //     bodyText1: TextStyle(
+    //       color: Color.fromRGBO(20, 51, 51, 1),
+    //     ),
+    //     bodyText2: TextStyle(
+    //       color: Color.fromRGBO(20, 51, 51, 1),
+    //     ),
+    //     headline6: TextStyle(
+    //       fontSize: 20,
+    //     )),
     cardTheme: CardTheme(
       color: Colors.white,
       elevation: 5,
