@@ -16,7 +16,6 @@ class PostPage extends StatefulWidget {
 }
 
 class _PostPageState extends State<PostPage> {
-  List<Post> postData = [];
   List<Post> userAddedPostData = [];
   bool _isLoading = false;
   int postAddedCount = 0;
@@ -25,6 +24,7 @@ class _PostPageState extends State<PostPage> {
 
   @override
   void didChangeDependencies() {
+    print('PostPage didChangeDependencies()');
     // befor build run
     setState(() {
       _isLoading = true;
@@ -88,16 +88,13 @@ class _PostPageState extends State<PostPage> {
 
   @override
   Widget build(BuildContext context) {
-    postData = context.read<PostsProvider>().getPosts;
-
+    print('PostPage build()');
     return Scaffold(
       endDrawer: Menu(),
       appBar: _buildAppBar(context),
       body: SafeArea(
         child: Container(
-          child: (_isLoading)
-              ? _buildProgressIndicator()
-              : PostList(postData: postData),
+          child: (_isLoading) ? _buildProgressIndicator() : PostList(type: 1),
         ),
       ),
     );

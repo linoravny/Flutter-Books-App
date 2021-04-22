@@ -4,6 +4,7 @@ class Post {
   final String appId;
   final String title;
   final String body;
+  final bool isAdded;
 
   Post({
     this.userId,
@@ -11,6 +12,7 @@ class Post {
     this.appId,
     this.title,
     this.body,
+    this.isAdded,
   });
   factory Post.fromJson(dynamic json) {
     return Post(

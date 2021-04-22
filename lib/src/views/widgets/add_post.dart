@@ -85,7 +85,6 @@ class _AddPostState extends State<AddPost> {
                           labelText: 'post title',
                           prefixIcon: Icon(Icons.title),
                           border: OutlineInputBorder(),
-                          //labelStyle: TextStyle(color: Colors.grey),
                         ),
                         textInputAction: TextInputAction.done,
                         keyboardType: TextInputType.text,

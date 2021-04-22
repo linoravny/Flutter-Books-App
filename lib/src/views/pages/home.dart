@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
               ),
               Tab(
                 icon: const Icon(Icons.star),
-                text: 'Favorite Posts',
+                text: 'Saved Posts',
               ),
             ],
           ),
