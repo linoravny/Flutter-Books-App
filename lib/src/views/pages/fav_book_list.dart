@@ -1,5 +1,6 @@
 import 'package:books_app/src/main_header.dart';
 import 'package:books_app/src/menu.dart';
+import 'package:books_app/src/views/widgets/favorites_posts.dart';
 
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class FavoriteUserBookList extends StatelessWidget {
       endDrawer: Menu(),
       appBar: MainHeader(title: 'Favoirte Books'),
       body: SafeArea(
-        child: Container(),
+        child: FavoritesPosts(),
       ),
     );
   }
