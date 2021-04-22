@@ -1,8 +1,9 @@
 import 'package:books_app/src/business_logic/models/post.dart';
 import 'package:books_app/src/business_logic/providers/posts_provider.dart';
 import 'package:books_app/src/business_logic/services/main_service_api.dart';
-import 'package:books_app/src/main-shell.dart';
+import 'package:books_app/src/menu.dart';
 import 'package:books_app/src/views/widgets/add_post.dart';
+import 'package:books_app/src/views/widgets/post_lists.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -48,24 +49,19 @@ class _PostPageState extends State<PostPage> {
     super.didChangeDependencies();
   }
 
-  @override
-  Widget build(BuildContext context) {
-    postData = context.read<PostsProvider>().getPosts;
-    userAddedPostData = context.read<PostsProvider>().getUserAddedPosts;
-    postAddedCount = userAddedPostData.length;
-
-    Widget _buildProgressIndicator() {
-      return new Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: CircularProgressIndicator(
-            backgroundColor: Colors.orange,
-          ),
+  Widget _buildProgressIndicator() {
+    return new Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Center(
+        child: CircularProgressIndicator(
+          backgroundColor: Colors.orange,
         ),
-      );
-    }
+      ),
+    );
+  }
 
-    final pageHeader = AppBar(
+  Widget _buildAppBar(context) {
+    return AppBar(
       leading: (postAddedCount < 5)
           ? IconButton(
               icon: const Icon(Icons.add),
@@ -83,42 +79,26 @@ class _PostPageState extends State<PostPage> {
               },
             )
           : null,
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: Colors.white, //change your color here
       ),
       title: const Text('Posts'),
     );
+  }
 
-    final pageBody = Container(
-      child: (_isLoading)
-          ? _buildProgressIndicator()
-          : ListView.builder(
-              itemCount: postData.length,
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    ListTile(
-                      leading: Icon(Icons.comment),
-                      title: Text("$index / " + postData.length.toString()),
-                      subtitle: Text(postData[index].title),
-                      contentPadding: EdgeInsets.symmetric(
-                        vertical: 8,
-                        horizontal: 15,
-                      ),
-                    ),
-                    Divider(
-                      color: Colors.grey,
-                    ),
-                  ],
-                );
-              },
-            ),
-    );
-    return ChangeNotifierProvider<PostsProvider>(
-      create: (_) => PostsProvider(),
-      child: AppMainShell(
-        widget: pageBody,
-        customAppHeader: pageHeader,
+  @override
+  Widget build(BuildContext context) {
+    postData = context.read<PostsProvider>().getPosts;
+
+    return Scaffold(
+      endDrawer: Menu(),
+      appBar: _buildAppBar(context),
+      body: SafeArea(
+        child: Container(
+          child: (_isLoading)
+              ? _buildProgressIndicator()
+              : PostList(postData: postData),
+        ),
       ),
     );
   }

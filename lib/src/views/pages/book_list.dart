@@ -1,7 +1,7 @@
 import 'package:books_app/src/business_logic/models/book.dart';
 import 'package:books_app/src/damy_data/books_data.dart';
-import 'package:books_app/src/main-shell.dart';
-import 'package:books_app/src/views/pages/book_item.dart';
+import 'package:books_app/src/menu.dart';
+import 'package:books_app/src/views/widgets/book_item.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 import 'package:flutter/material.dart';
@@ -37,10 +37,8 @@ class _BookListState extends State<BookList> {
       filterBook.sort((b, a) => a.author.compareTo(b.author));
   }
 
-  @override
-  Widget build(BuildContext context) {
-    print(filterBook[0].author);
-    final pageHeader = AppBar(
+  Widget buildCustomAppHeader(BuildContext context) {
+    return AppBar(
       leading: IconButton(
         icon: const Icon(Icons.arrow_back),
         tooltip: 'back button',
@@ -65,10 +63,15 @@ class _BookListState extends State<BookList> {
         ),
       ],
     );
+  }
 
-    var pageBody = Container(
-      child: Center(
-        child: new ListView.builder(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      endDrawer: Menu(),
+      appBar: buildCustomAppHeader(context),
+      body: SafeArea(
+        child: ListView.builder(
           padding: const EdgeInsets.all(8),
           itemCount: filterBook.length,
           itemBuilder: (BuildContext context, int index) {
@@ -112,11 +115,6 @@ class _BookListState extends State<BookList> {
           },
         ),
       ),
-    );
-
-    return AppMainShell(
-      widget: pageBody,
-      customAppHeader: pageHeader,
     );
   }
 }

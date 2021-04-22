@@ -2,16 +2,20 @@ import 'dart:io';
 
 import 'package:books_app/src/business_logic/providers/user_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
 class MainHeader extends StatefulWidget implements PreferredSizeWidget {
-  final title;
-  MainHeader({this.title});
+  final String title;
+  final Widget tabs;
+  final double heightSize;
 
-  @override
-  Size get preferredSize => const Size.fromHeight(50);
+  MainHeader({
+    this.title = 'Book App',
+    this.tabs,
+    this.heightSize = 50,
+  });
+  Size get preferredSize => Size.fromHeight(this.heightSize);
 
   @override
   _MainHeaderState createState() => _MainHeaderState();
@@ -29,10 +33,6 @@ class _MainHeaderState extends State<MainHeader> {
 
   @override
   Widget build(BuildContext context) {
-    //listener to provider
-    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light
-    //     .copyWith(statusBarIconBrightness: Brightness.light));
-
     final userData = Provider.of<UserProvider>(
       context,
     ).userData;
@@ -43,9 +43,6 @@ class _MainHeaderState extends State<MainHeader> {
     ).getAvatar;
 
     return AppBar(
-      //systemOverlayStyle: SystemUiOverlayStyle(statusBarColor: Colors.orange),
-      // backgroundColor: Colors.red, // status bar color
-      // brightness: Brightness.light, // status bar brightness
       leading: (isUserAuth)
           ? IconButton(
               icon: const Icon(Icons.camera_alt_sharp),
@@ -78,9 +75,10 @@ class _MainHeaderState extends State<MainHeader> {
                     : FileImage(File(imageFile.path)),
               ),
             ),
-          const Text('Books App'),
+          Text(widget.title),
         ],
       ),
+      bottom: widget.tabs,
     );
   }
 }

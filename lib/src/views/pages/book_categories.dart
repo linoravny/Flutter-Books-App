@@ -1,5 +1,6 @@
 import 'package:books_app/src/damy_data/category_data.dart';
-import 'package:books_app/src/main-shell.dart';
+import 'package:books_app/src/main_header.dart';
+import 'package:books_app/src/menu.dart';
 import 'package:books_app/src/views/widgets/category_item.dart';
 
 import 'package:flutter/material.dart';
@@ -36,9 +37,16 @@ class BookCategories extends StatelessWidget {
   );
   @override
   Widget build(BuildContext context) {
-    return AppMainShell(
-      widget: pageBody,
-      isWrapWithScroll: true,
+    return Scaffold(
+      endDrawer: Menu(),
+      appBar: MainHeader(
+        title: 'Books Categories',
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: pageBody,
+        ),
+      ),
     );
   }
 }
