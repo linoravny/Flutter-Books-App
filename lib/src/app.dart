@@ -31,15 +31,10 @@ class _AppState extends State<App> {
         Scaffold(
       endDrawer: Menu(),
       appBar: MainHeader(title: 'Books App'),
-      //body: routes.elementAt(_selectedIndex),
-      // SafeArea(
-      //   child: IndexedStack(
-      //     index: _selectedPage,
-      //     children: [
-      //       for (final tabItem in TabNavigationItem.items) tabItem.page,
-      //     ],
-      //   ),
-      // ),
+      body: SafeArea(
+        child: Container(),
+      ),
+
       //bottomNavigationBar: BottomTabs(),
     );
   }

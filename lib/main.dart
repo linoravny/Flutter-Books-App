@@ -35,7 +35,7 @@ class Main extends StatelessWidget {
 
         //initialRoute: '/',
         routes: {
-          //'/': (context) => LoginForm(),
+          '/': (context) => Home(),
           LoginForm.routeName: (context) => LoginForm(),
           Home.routeName: (context) => Home(),
           BookCategories.routeName: (context) => BookCategories(),
@@ -46,7 +46,7 @@ class Main extends StatelessWidget {
           // '/login': (context) => LoginForm(),
           // '/book-categories': (context) => BookCategories(),
         },
-        home: App(),
+        //home: App(),
 
         //when no route define in routes object
         // onGenerateRoute: (settings) {
