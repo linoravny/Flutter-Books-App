@@ -1,5 +1,6 @@
 import 'package:books_app/src/main_header.dart';
 import 'package:books_app/src/menu.dart';
+import 'package:books_app/src/views/widgets/favorites_posts.dart';
 import 'package:books_app/src/views/widgets/home_tab_1.dart';
 
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class Home extends StatelessWidget {
             child: TabBarView(
               children: <Widget>[
                 HomeTab1(),
-                Text('Favorite Posts content'),
+                FavoritesPosts(),
               ],
             ),
           ),

@@ -1,7 +1,8 @@
 // not in use!!!!
 
+import 'package:books_app/src/bottom-navigation-bar.dart';
+import 'package:books_app/src/business_logic/models/tabs.dart';
 import 'package:books_app/src/main_header.dart';
-import 'package:books_app/src/views/pages/book_categories.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,12 +15,6 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  final pageBody = SafeArea(
-    child: SingleChildScrollView(
-      child: BookCategories(),
-    ),
-  );
-
   @override
   Widget build(BuildContext context) {
     return //Platform.isIOS
@@ -36,7 +31,16 @@ class _AppState extends State<App> {
         Scaffold(
       endDrawer: Menu(),
       appBar: MainHeader(title: 'Books App'),
-      body: pageBody,
+      //body: routes.elementAt(_selectedIndex),
+      // SafeArea(
+      //   child: IndexedStack(
+      //     index: _selectedPage,
+      //     children: [
+      //       for (final tabItem in TabNavigationItem.items) tabItem.page,
+      //     ],
+      //   ),
+      // ),
+      //bottomNavigationBar: BottomTabs(),
     );
   }
 }

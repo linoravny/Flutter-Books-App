@@ -1,3 +1,4 @@
+import 'package:books_app/src/app.dart';
 import 'package:books_app/src/business_logic/providers/posts_provider.dart';
 import 'package:books_app/src/business_logic/providers/user_provider.dart';
 import 'package:books_app/src/views/pages/book_categories.dart';
@@ -30,10 +31,11 @@ class Main extends StatelessWidget {
       child: MaterialApp(
         title: 'Books App',
         theme: appTheme(),
-        //home: Home(),
-        initialRoute: '/',
+        debugShowCheckedModeBanner: false,
+
+        //initialRoute: '/',
         routes: {
-          '/': (context) => Home(),
+          //'/': (context) => LoginForm(),
           LoginForm.routeName: (context) => LoginForm(),
           Home.routeName: (context) => Home(),
           BookCategories.routeName: (context) => BookCategories(),
@@ -44,6 +46,7 @@ class Main extends StatelessWidget {
           // '/login': (context) => LoginForm(),
           // '/book-categories': (context) => BookCategories(),
         },
+        home: App(),
 
         //when no route define in routes object
         // onGenerateRoute: (settings) {
